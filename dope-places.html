@@ -76,19 +76,9 @@
 	var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
 	.setView([38.0393917,-84.5020832], 14);
 
-	var map = L.mapbox.map('map', 'examples.map-9ijuk24y');
-    L.control.locate().addTo(map);
-
 	var markerLayer = L.mapbox.markerLayer()
 	.loadURL('http://maptastik.github.io/dope-places.geojson')
 	.addTo(map);
-
-	$(document).ready(function() {
-	    $('#menu').accordion({
-	    	active: false,
-	    	collapsible: true
-	    });
-	});
 
 	$(document).ready(function() {
 	    $('#map-ui').accordion({
