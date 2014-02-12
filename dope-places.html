@@ -11,6 +11,20 @@
 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
+<script>
+	$(function() {
+    $( "#tabs" ).tabs();
+ 
+    // fix the classes
+    $( ".tabs-bottom .ui-tabs-nav, .tabs-bottom .ui-tabs-nav > *" )
+      .removeClass( "ui-corner-all ui-corner-top" )
+      .addClass( "ui-corner-bottom" );
+ 
+    // move the nav to the bottom
+    $( ".tabs-bottom .ui-tabs-nav" ).appendTo( ".tabs-bottom" );
+  });
+</script>
+
 <style>
 	body { margin:0; padding:0; }
 	#map { position:absolute; top:0; bottom:0; width:100%}
@@ -106,18 +120,6 @@
 	    	collapsible: true
 	    });
 	});
-
-	$(function() {
-    $( "#tabs" ).tabs();
- 
-    // fix the classes
-    $( ".tabs-bottom .ui-tabs-nav, .tabs-bottom .ui-tabs-nav > *" )
-      .removeClass( "ui-corner-all ui-corner-top" )
-      .addClass( "ui-corner-bottom" );
- 
-    // move the nav to the bottom
-    $( ".tabs-bottom .ui-tabs-nav" ).appendTo( ".tabs-bottom" );
-  });
 </script>
 </body>
 </html>
