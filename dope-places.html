@@ -8,6 +8,8 @@
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
 <style>
 	body { margin:0; padding:0; }
@@ -70,22 +72,19 @@
 </div>
 
 <script>
-var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
-.setView([38.0393917,-84.5020832], 16);
+	var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
+	.setView([38.0393917,-84.5020832], 16);
 
-var markerLayer = L.mapbox.markerLayer()
-.loadURL('http://maptastik.github.io/dope-places.geojson')
-.addTo(map);
+	var markerLayer = L.mapbox.markerLayer()
+	.loadURL('http://maptastik.github.io/dope-places.geojson')
+	.addTo(map);
+
+	$(document).ready(function() {
+	    $('#map-ui').accordion();
+	});
 </script>
 
 </body>
 <footer>
-
-
-	<!--<script>
-	$(document).ready(function() {
-	    $('#map-ui').accordion();
-	});
-	</script>-->
 </footer>
 </html>
