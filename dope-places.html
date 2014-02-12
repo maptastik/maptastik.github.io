@@ -52,6 +52,27 @@
 
 <body>
 
+<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.js'></script>
+<link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.css' rel='stylesheet' />
+<!--[if lt IE 9]>
+  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.ie.css' rel='stylesheet' />
+<![endif]-->
+
+<style type="text/css">
+    .leaflet-control-locate {
+        border: 1px solid rgba(0,0,0,0.4);
+    }
+
+    .leaflet-control-locate a {
+        background-color: #fff;
+        background-position: -3px, -2px;
+    }
+
+    .leaflet-control-locate.active a {
+        background-position: -33px -2px;
+    }
+</style>
+
 <div id='map'></div>
 
 <div id='map-ui'>
@@ -76,6 +97,9 @@
 <script>
 	var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
 	.setView([38.0393917,-84.5020832], 14);
+
+	var map = L.mapbox.map('map', 'examples.map-9ijuk24y');
+    L.control.locate().addTo(map);
 
 	var markerLayer = L.mapbox.markerLayer()
 	.loadURL('http://maptastik.github.io/dope-places.geojson')
