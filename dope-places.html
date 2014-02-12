@@ -11,20 +11,6 @@
 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
-<script>
-	$(function() {
-    $( "#tabs" ).tabs();
- 
-    // fix the classes
-    $( ".tabs-bottom .ui-tabs-nav, .tabs-bottom .ui-tabs-nav > *" )
-      .removeClass( "ui-corner-all ui-corner-top" )
-      .addClass( "ui-corner-bottom" );
- 
-    // move the nav to the bottom
-    $( ".tabs-bottom .ui-tabs-nav" ).appendTo( ".tabs-bottom" );
-  });
-</script>
-
 <style>
 	body { margin:0; padding:0; }
 	#map { position:absolute; top:0; bottom:0; width:100%}
@@ -40,7 +26,7 @@
 	  margin:0;padding:0;
 	}*/
 	#map-ui h3 {
-	  font-size:12px;
+	  font-size:43px;
 	  background:#FFF;
 	  color:#3C4E5A;
 	  display:block;
@@ -61,47 +47,37 @@
 	  margin:0;padding:0;
 	  text-decoration:none;
 	}
-
-	#tabs .tabs-spacer { float: left; height: 200px; }
-	.tabs-bottom .ui-tabs-nav { clear: left; padding: 0 .2em .2em .2em; }
-	.tabs-bottom .ui-tabs-nav li { top: auto; bottom: 0; margin: 0 .2em 1px 0; border-bottom: auto; border-top: 0; }
-	.tabs-bottom .ui-tabs-nav li.ui-tabs-active { margin-top: -1px; padding-top: 1px; }
 </style>
 </head>
 
 <body>
-
 <div id='map'></div>
 
-<div id="tabs" class="tabs-bottom">
-	<ul>
-		<li><a href="#tabs-1">List</a></li>
-	</ul>
-	<div class="tabs-spacer"></div>
-  	<div id="tabs-1">
-		<div id='map-ui'>
-			<h3>CONFERENCE</h3>
-			    <div>
-			    	<a href='#' id='1'>Student Center</a>
-			    </div>
-			<h3>FOOD</h3>    
-			    <div>
-			    	<a href='#' id='2'>Bourbon n' Toulouse</a>
-			    </div>
-		    <h3>LODGING</h3>
-			    <div>
-			    	<a href='#' id='3'>Hyatt Regency Lexington</a>
-			    </div>
-			<h3>BAR</h3>    
-			    <div>
-			    	<a href='#' id='4'>Al's Bar</a>
-			    </div>
-		</div>
-	</div>
+<div id='map-ui'>
+	<h3>CONFERENCE</h3>
+	    <div>
+	    	<a href='#' id='1'>Student Center</a>
+	    </div>
+	<h3>FOOD</h3>    
+	    <div>
+	    	<a href='#' id='2'>Bourbon n' Toulouse</a>
+	    </div>
+    <h3>LODGING</h3>
+	    <div>
+	    	<a href='#' id='3'>Hyatt Regency Lexington</a>
+	    </div>
+	<h3>BAR</h3>    
+	    <div>
+	    	<a href='#' id='4'>Al's Bar</a>
+	    </div>
+</div>
 
 <script>
 	var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
 	.setView([38.0393917,-84.5020832], 14);
+
+	var map = L.mapbox.map('map', 'examples.map-9ijuk24y');
+    L.control.locate().addTo(map);
 
 	var markerLayer = L.mapbox.markerLayer()
 	.loadURL('http://maptastik.github.io/dope-places.geojson')
