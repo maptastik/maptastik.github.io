@@ -6,8 +6,8 @@
 
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 <style>
 	body { margin:0; padding:0; }
@@ -73,11 +73,9 @@ var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
 var markerLayer = L.mapbox.markerLayer()
 .loadURL('http://maptastik.github.io/dope-places.geojson')
 .addTo(map);
-</script>
 
-<script>
 $(document).ready(function() {
-    $('#menu').accordion();
+    $('#map-ui').accordion();
 });
 </script>
 
