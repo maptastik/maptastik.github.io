@@ -153,8 +153,14 @@ body {
 	.setView([38.0393917,-84.5020832], 14);
 
 	// find and store a variable reference to the list of filters
-	var filters = document.getElementById('Type');
+	var filters = document.getElementById('filters');
 
+	//THIS WHERE I MOVED .markerLayer
+	//loads dope-places.geojson
+	var markerLayer = L.mapbox.markerLayer()
+	.loadURL('http://maptastik.github.io/dope-places.geojson')
+	.addTo(map);
+	
 	// Wait until the marker layer is loaded in order to build a list of possible
 	// types. If you are doing this with another markerLayer, you should change
 	// map.markerLayer to the variable you have assigned to your markerLayer
@@ -211,10 +217,7 @@ body {
 	  }
 	});
 
-	//loads dope-places.geojson
-	var markerLayer = L.mapbox.markerLayer()
-	.loadURL('http://maptastik.github.io/dope-places.geojson')
-	.addTo(map);
+
 </script>
 </body>
 </html>
