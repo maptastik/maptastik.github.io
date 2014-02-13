@@ -130,7 +130,7 @@ body {
 	.setView([38.0393917,-84.5020832], 14);
 
 	// find and store a variable reference to the list of filters
-	var filters = document.getElementById('filters');
+	var filters = document.getElementById('Type');
 
 	// Wait until the marker layer is loaded in order to build a list of possible
 	// types. If you are doing this with another markerLayer, you should change
@@ -140,6 +140,7 @@ body {
 	  // hardcode an array of types if you know what you want to filter on,
 	  // like
 	  // var types = ['foo', 'bar'];
+	  var types = ['Conference Location', 'Restaurant', 'Bar', 'Coffee', 'Lodging', 'Other'];
 	  var typesObj = {}, types = [];
 	  var features = map.markerLayer.getGeoJSON().features;
 	  for (var i = 0; i < features.length; i++) {
