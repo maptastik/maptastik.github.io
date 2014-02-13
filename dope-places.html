@@ -110,10 +110,28 @@ body {
 	.setView([38.0393917,-84.5020832], 14);
 
 	//loads dope-places.geojson
-	var markerLayer = L.mapbox.markerLayer()
-	.loadURL('http://maptastik.github.io/dope-places.geojson')
-	.addTo(map);
+	// var markerLayer = L.mapbox.markerLayer()
+	// .loadURL('http://maptastik.github.io/dope-places.geojson')
+	// .addTo(map);
 	
+	$.ajax({
+    type: "POST",
+    url: "http://maptastik.github.io/dope-places.geojson",
+    dataType: 'json',
+    success: function (response) {
+
+        geojsonLayer = L.geoJson(response, {
+            style: function (feature) {
+		return {color: feature.properties.color};
+	},
+	onEachFeature: function (feature, layer) {
+		layer.bindPopup(feature.properties.description);
+	}
+        }).addTo(map);
+    }
+});
+	
+
 
 </script>
 </body>
