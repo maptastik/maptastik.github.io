@@ -34,24 +34,6 @@
     maxZoom: 18
     });
 
-    //GET geoJSON USING jQUERY FUNCTION AND MAP IT
-     $.getJSON($('link[rel="points"]').attr("href"), function(data) {
-      var geojson = L.geoJson(data, {
-        onEachFeature: function (feature, layer) {
-          layer.bindPopup(feature.properties.Name);
-        },
-        style: function(feature) {
-          switch (feature.properties.Type) {
-              case 'Bar': return {color: "#ff0000"};
-              case 'Lodging':   return {color: "#0000ff"};
-          }
-        }       
-      });
-       var map = L.map('dope-map').fitBounds(geojson.getBounds());
-        tiles.addTo(map);
-        geojson.addTo(map);
-        });
-
     //STYLE MARKERS
     var geojsonMarkerOptions = {
       radius: 8,
@@ -61,6 +43,27 @@
       opacity: 1,
       fillOpacity: 0.8
     };
+
+    //GET geoJSON USING jQUERY FUNCTION AND MAP IT
+     $.getJSON($('link[rel="points"]').attr("href"), function(data) {
+      var geojson = L.geoJson(data, {
+        onEachFeature: function (feature, layer) {
+          layer.bindPopup(feature.properties.Name);
+        },
+        pointToLayer: function (feature, latlng) {
+          return L.circleMarker(latlng, geojsonMarkerOptions);
+        },
+        style: function(feature) {
+            switch (feature.properties.Type) {
+                case 'Bar': return {color: "#ff0000"};
+                case 'Lodging':   return {color: "#0000ff"};
+              }
+        }
+      });
+       var map = L.map('dope-map').fitBounds(geojson.getBounds());
+        tiles.addTo(map);
+        geojson.addTo(map);
+        });
 
     //ADD GEOJSON FEATURE LAYER FROM GITHUB
     
