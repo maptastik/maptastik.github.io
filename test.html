@@ -39,7 +39,13 @@
       var geojson = L.geoJson(data, {
         onEachFeature: function (feature, layer) {
           layer.bindPopup(feature.properties.Name);
-        }
+        },
+        style: function(feature) {
+          switch (feature.properties.Type) {
+              case 'Bar': return {color: "#ff0000"};
+              case 'Lodging':   return {color: "#0000ff"};
+          }
+        }       
       });
        var map = L.map('dope-map').fitBounds(geojson.getBounds());
         tiles.addTo(map);
