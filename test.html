@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<head>
+<meta charset=utf-8 />
+<title>Leaflet Test</title>
+<!--LIBRARIES-->
+  <!--INCLUDE LEAFLET CSS-->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+  <!--INCLUDE LEAFLEET JS FILE-->
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+
+<!--CSS-->
+  <style>
+  /*MAP STYLE*/
+    #map { height: 400px; }
+
+  </style>
+</head>
+<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<body>
+<!--DIV CONTAINER FOR MAP-->
+  <div id="map"></div>
+
+<!--SCRIPTS-->
+  <!--CREATE & CENTER MAP-->
+  <script>
+    //CENTER & ZOOM MAP
+    var map = L.map('map').setView([38.0393917,-84.5020832], 14);
+
+    //LOAD TILES
+    L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.jpg', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.</a>',
+    maxZoom: 18
+    }).addTo(map);
+
+    //STYLE MARKERS
+    var geojsonMarkerOptions = {
+      radius: 8,
+      //fillColor: "#ff7800",
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    };
+
+    //ADD GEOJSON FEATURE LAYER (W/ STYLE FROM geojsonMarkerOptions)
+    
+    //geoJSON LAYER
+    var geojsonFeature = [{
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":["-84.4863908142","38.0540372095"]},
+      "properties":{
+        "Name":"Al's Bar",
+        "Add":"601 N Limestone St",
+        "City":"Lexington",
+        "State":"KY",
+        "Zip":"40508",
+        "Type":"Bar",
+        "Vegan":"~",
+        "Note":"~"}
+      }, {
+      "type":"Feature",
+      "geometry":{
+        "type":"Point",
+        "coordinates":["-84.4950894701","38.0483797617"]},
+      "properties":{
+        "Name":"Gratz Park Inn",
+        "Add":"120 W 2nd St",
+        "City":"Lexington",
+        "State":"KY",
+        "Zip":"40507",
+        "Type":"Lodging",
+        "Vegan":"~",
+        "Note":"~"}
+      }
+    ];
+
+    L.geoJson(geojsonFeature, {
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, geojsonMarkerOptions);
+      },
+    style: function(feature) {
+        switch (feature.properties.Type) {
+            case 'Bar': return {color: "#ff0000"};
+            case 'Lodging':   return {color: "#0000ff"};
+        }
+      }
+    }).addTo(map);
+
+  </script>
+</body>
+<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+</html>
