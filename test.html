@@ -37,7 +37,6 @@
     //STYLE MARKERS
     var geojsonMarkerOptions = {
       radius: 8,
-      //fillColor: "#ff7800",
       color: "#000",
       weight: 1,
       opacity: 1,
@@ -55,32 +54,22 @@
         },
         style: function(feature) {
             switch (feature.properties.Type) {
-                case 'Bar': return {color: "#ff0000"};
-                case 'Lodging':   return {color: "#0000ff"};
+                case 'Conference Location': return {color: "#4daf4a"}; //GREEN
+                case 'Restaurant':   return {color: "#e41a1c"}; //RED
+                case 'Bar': return {color: "#377eb8"}; //BLUE
+                case 'Coffee':   return {color: "#984ea3"}; //PURPLE
+                case 'Lodging': return {color: "#ff7f00"}; //ORANGE
+                case 'Other':   return {color: "#ffff33"}; //YELLOW
+                ;
               }
         }
       });
+
+      //DRAW MAP IN DIV WITH BOUNDS, TILES, AND geoJSON
        var map = L.map('dope-map').fitBounds(geojson.getBounds());
         tiles.addTo(map);
         geojson.addTo(map);
         });
-
-    //ADD GEOJSON FEATURE LAYER FROM GITHUB
-    
-
-
-    // L.geoJson(geojsonFeature, {
-    // pointToLayer: function (feature, latlng) {
-    //     return L.circleMarker(latlng, geojsonMarkerOptions);
-    //   },
-    // style: function(feature) {
-    //     switch (feature.properties.Type) {
-    //         case 'Bar': return {color: "#ff0000"};
-    //         case 'Lodging':   return {color: "#0000ff"};
-    //     }
-    //   }
-    // }).addTo(map);
-
   </script>
 </body>
 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++-->
