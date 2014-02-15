@@ -12,7 +12,7 @@
   <!--INCLUDE jQUERY-->
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <!--LINK TO geoJSON FILE-->
-  <link rel="points" type="application/json" href="./dope-places.geojson">
+  <!-- <link rel="points" type="application/json" href="./dope-places.geojson"> -->
 
 <!--CSS-->
   <style>
@@ -44,7 +44,7 @@
     };
 
     //GET geoJSON USING jQUERY FUNCTION AND MAP IT
-     $.getJSON($('link[rel="points"]').attr("href"), function(data) {
+     $.getJSON("./dope-places.geojson", function(data) {
       var geojson = L.geoJson(data, {
         onEachFeature: function (feature, layer) {
           layer.bindPopup(feature.properties.Name);
