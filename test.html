@@ -47,7 +47,7 @@
      $.getJSON("./dope-places.geojson", function(data) {
       var geojson = L.geoJson(data, {
         onEachFeature: function (feature, layer) {
-          layer.bindPopup(feature.properties.Name);
+          layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.Address);
         },
         pointToLayer: function (feature, latlng) {
           return L.circleMarker(latlng, geojsonMarkerOptions);
