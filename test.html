@@ -11,21 +11,9 @@
   <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
   <!--INCLUDE jQUERY-->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <!--INCLUDE jQUERY-UI-->
-  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
-  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-
-<!--CREATES TABS-->
-<script>
-  //sets navigation tabs
-  //consider vertical stack...back to accordion?
-  $(function() {
-    $( "#tabs" ).tabs({
-      collapsible: true,
-      selected: 0
-    });
-  });
-</script>
+  <!--INCLUDE jQUERY-MOBILE-->
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
+  <script src="//code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
 
 <!--CSS-->
   <style>
@@ -41,44 +29,6 @@
     top:0; bottom:0;
     width:100%
   }
-
-  /*TAB STYLE*/
-  #tabs {
-    position:fixed;
-    bottom: 0;
-    width: 100%;
-    z-index:100;
-  }
-    tabs-buttons .ui-tabs-nav { 
-      padding: 0em; 
-      background: transparent; 
-      border-width: 0px;
-      background-image: none;  
-    }
-
-    tabs-buttons .ui-tabs-nav li { 
-        position: static; 
-        margin: 0px;
-        border-bottom: 1px solid #327e04 !important; 
-        -moz-border-radius: 0px; 
-        -webkit-border-radius: 0px; 
-        border-radius: 0px; 
-    } 
-    tabs-buttons .ui-tabs-nav li:first-child { 
-        -moz-border-radius: 6px 0px 0px 6px; 
-        -webkit-border-radius: 6px 0px 0px 6px; 
-        border-radius: 6px 0px 0px 6px; 
-    } 
-    tabs-buttons .ui-tabs-nav li:last-child { 
-        -moz-border-radius: 0px 6px 6px 0px; 
-        -webkit-border-radius: 0px 6px 6px 0px; 
-        border-radius: 0px 6px 6px 0px; 
-    } 
-    tabs-buttons .ui-tabs-nav li.ui-tabs-selected { 
-        padding-bottom: 0px; 
-        border-bottom: 1px solid #d4ccb0 !important; 
-    }
-
   </style>
 </head>
 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -87,51 +37,6 @@
   <div id="dope-map"></div>
 
 <!--nav tabs-->
-<div id="tabs">
-  <ul>
-    <li><a href="#tabs-1" style="background-color:#4daf4a">CONFERENCE</a></li>
-    <li><a href="#tabs-2" style="background-color:#e41a1c">RESTAURANT</a></li>
-    <li><a href="#tabs-3" style="background-color:#377eb8">BAR</a></li>
-    <li><a href="#tabs-4" style="background-color:#984ea3">COFFEE</a></li>
-    <li><a href="#tabs-5" style="background-color:#ff7f00">LODGING</a></li>
-    <li><a href="#tabs-6" style="background-color:#ffff33">OTHER</a></li>
-  </ul>
-  <div id="tabs-1">
-    <p>Gaines Center</p>
-    <p>Memorial Hall</p>
-    <p>Student Center</p>
-    <p>etc</p>
-  </div>
-  <div id="tabs-2">
-    <p>Bourbon n' Toulouse</p>
-    <p>The Local Taco</p>
-    <p>Tolly-Ho</p>
-    <p>etc</p>
-  </div>
-  <div id="tabs-3">
-    <p>Al's Bar</p>
-    <p>Tin Roof</p>
-    <p>West 6th</p>
-    <p>etc</p>
-  </div>
-  <div id="tabs-4">
-    <p>Coffea</p>
-    <p>Common Grounds</p>
-    <p>North Lime Coffee and Donuts</p>
-    <p>etc</p>
-  </div>
-  <div id="tabs-5">
-    <p>Gratz Park Inn</p>
-    <p>Holiday Inn Express</p>
-    <p>Spring Hill Suites</p>
-    <p>etc</p>
-  </div>
-  <div id="tabs-6">
-    <p>Blue Grass Airport</p>
-    <p>Johnny Print</p>
-    <p>etc</p>
-  </div>
-</div>
 
 <!--SCRIPTS-->
   <script>
