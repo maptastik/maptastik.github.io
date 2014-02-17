@@ -99,13 +99,13 @@
                 ;
               }
         }
-      });
+      //});
 
       //DRAW MAP IN DIV WITH BOUNDS, TILES, AND geoJSON
        var map = L.map('dope-map').fitBounds(geojson.getBounds());
         tiles.addTo(map);
         geojson.addTo(map);
-        });
+        };
     
     //SCRIPTING FOR FEATURE LIST AND CLICK TO POINT
       var options = '<option value="Select a Feature">Select a Feature</option>';
@@ -147,6 +147,10 @@
         map._layers[id].openPopup();
       };
     }
+
+  );
+};
+
 
   </script>
 </body>
