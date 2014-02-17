@@ -102,7 +102,7 @@
       // });
 
       //DRAW MAP IN DIV WITH BOUNDS, TILES, AND geoJSON
-       map = L.map('dope-map').fitBounds(geojson.getBounds());
+       var map = L.map('dope-map').fitBounds(geojson.getBounds());
         tiles.addTo(map);
         geojson.addTo(map);
         });
