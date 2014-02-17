@@ -9,8 +9,7 @@
 
 <script>
   $(function() {
-    $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
-    $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+    $( "#accordion" ).accordion();
   });
  </script>
  <style>
@@ -21,13 +20,7 @@
 	width: 320px;
 	margin: 0 auto 0 auto;
 	}
-	
-	.ui-tabs-vertical { width: 55em; }
-	.ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
-	.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
-	.ui-tabs-vertical .ui-tabs-nav li a { display:block; }
-	.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
-	.ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
+
 </style>
 </head>
 <body>
@@ -40,46 +33,19 @@
 	scrolling="no">
 </iframe>
 
-<div id="tabs">
-	<ul>
-		<li><a href="#tabs-1">KU-Stone Rd</li>
-		<li><a href="#tabs-2">361 Duke Rd</li>
-		<li><a href="#tabs-3">15 Richmond Ave</li>
-		<li><a href="#tabs-4">212 St Ann Dr</li>
-		<li><a href="#tabs-5">997 Jouett Creek Dr</li>
-		<li><a href="#tabs-6">537 E New Circle Rd</li>
-		<li><a href="#tabs-7">327 Eastin Rd</li>
-		<li><a href="#tabs-8">175 E New Circle Rd</li>
-		<li><a href="#tabs-9">720 Bryan Ave</li>
-		<li><a href="#tabs-10">Citation-Bull Lea</li>
-		<li><a href="#tabs-11">475 Angliana Ave</li>
-		<li><a href="#tabs-12">500 Stone Rd</li>
-	</ul>
-	<div id="tabs-1">
-		<h2>KU-Stone Rd</h2>
-	</div>
-	<div id="tabs-2"></div>
-		<h2>361 Duke Rd</h2>
-	<div id="tabs-3"></div>
-		<h2>15 Richmond Ave</h2>
-	<div id="tabs-4"></div>
-		<h2>212 St Ann Dr</h2>
-	<div id="tabs-5"></div>
-		<h2>997 Jouett Creek Dr</h2>
-	<div id="tabs-6"></div>
-		<h2>537 E New Circle Rd</h2>
-	<div id="tabs-7"></div>
-		<h2>327 Eastin Rd</h2>
-	<div id="tabs-8"></div>
-		<h2>175 E New Circle Rd</h2>
-	<div id="tabs-9"></div>
-		<h2>720 Bryan Ave</h2>
-	<div id="tabs-10"></div>
-		<h2>Citation-Bull Lea</h2>
-	<div id="tabs-11"></div>
-		<h2>475 Angliana Ave</h2>
-	<div id="tabs-12"></div>
-		<h2>500 Stone Rd</h2>		
+<div id="accordion">
+		<h3>KU-Stone Rd</h3>
+		<h3>361 Duke Rd</h3>
+		<h3>15 Richmond Ave</h3>
+		<h3>212 St Ann Dr</h3>
+		<h3>997 Jouett Creek Dr</h3>
+		<h3>537 E New Circle Rd</h3>
+		<h3>327 Eastin Rd</h3>
+		<h3>175 E New Circle Rd</h3>
+		<h3>720 Bryan Ave</h3>
+		<h3>Citation-Bull Lea</h3>
+		<h3>475 Angliana Ave</h3>
+		<h3>500 Stone Rd</h3>		
 </div>
 
 </body>
