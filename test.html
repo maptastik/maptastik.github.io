@@ -99,59 +99,13 @@
                 ;
               }
         }
-      //});
+      });
 
       //DRAW MAP IN DIV WITH BOUNDS, TILES, AND geoJSON
        var map = L.map('dope-map').fitBounds(geojson.getBounds());
         tiles.addTo(map);
         geojson.addTo(map);
         };
-    
-    //SCRIPTING FOR FEATURE LIST AND CLICK TO POINT
-      var options = '<option value="Select a Feature">Select a Feature</option>';
-
-      var features = []; 
-      geojson.eachLayer(function (layer) {
-      var id = layer._leaflet_id;
-      var name = layer.feature.properties.Name;
-      var coords = layer.feature.geometry.coordinates;
-      var lng = layer.feature.geometry.coordinates[0];
-      var lat = layer.feature.geometry.coordinates[1];
-
-      // Populate features array and build autocomplete
-      features.push({id: id, label: name, value: name, lat: lat, lng: lng});
-      $( "#search" ).autocomplete({
-        source: features,
-        minLength: 3,
-        select: function( event, ui ) {
-          map.setView([ui.item.lat, ui.item.lng], 18);
-          map._layers[ui.item.id].openPopup();
-        }
-      });
-
-      // Populate sidebar table with clickable feature links
-      $("#featurelist table").append('<tr><td><a href="#" onclick="map._layers['+id+'].openPopup(); return false;">'+name+'</a></td></tr>');
-      // Add features to zoom dropdown
-      options += '<option value="' + lng + "," + lat + '", id="' + id + '">' + name + '</option>';
-    });
-        $("#zoom").html(options);
-
-    // Function call by "zoom" dropdown onSelect
-    function zoomToFeature (state, coords, id) {
-      if (state === "Select a Feature") {
-        map.fitBounds(geojson.getBounds());
-      }
-      else {
-        lnglat = coords.split(",");
-        map.setView([lnglat[1], lnglat[0]],18);
-        map._layers[id].openPopup();
-      };
-    }
-
-  );
-};
-
-
   </script>
 </body>
 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++-->
