@@ -12,6 +12,7 @@ body { margin:0; padding:0; }
 </Style>
 </Head>
 <Body>
+<Div id='map'></Div>
 <a href="#popupNested" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-bars ui-btn-icon-left ui-btn-b" data-transition="pop">Choose a location...</a>
 <div data-role="popup" id="popupNested" data-theme="none">
     <div data-role="collapsibleset" data-theme="b" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" style="margin:0; width:250px;">
@@ -96,7 +97,6 @@ body { margin:0; padding:0; }
         </div><!-- /collapsible -->
     </div><!-- /collapsible set -->
 </div><!-- /popup -->
-<Div id='map'></Div>
 <Script>
   var map = mapbox.map('map');
   var layer = mapbox.layer().id('springmeyer.map-oclouv0v');
