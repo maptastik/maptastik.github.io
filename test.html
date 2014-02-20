@@ -24,7 +24,7 @@
     padding:0; 
   }
   /*MAP STYLE*/
-    #dope-map { 
+    #dopeMap { 
     position:absolute; 
     top:0; bottom:0;
     width:100%
@@ -34,7 +34,7 @@
 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 <body>
 <!--DIV CONTAINER FOR MAP-->
-  <div id="dope-map"></div>
+  <div id="dopeMap"></div>
 
 <!--nav tabs-->
 <a href="#popupNested" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-bars ui-btn-icon-left ui-btn-b" data-transition="pop">Choose a location...</a>
@@ -162,13 +162,13 @@
 
       places.forEach(function(item) {
         document.getElementById(item.id).onclick = {
-          dope-map.ease.location({lat: item.latitude, lon: item.lon}).zoom(15);
+          dopeMap.ease.location({lat: item.latitude, lon: item.lon}).zoom(15);
           return false;
         }
       });
 
       //DRAW MAP IN DIV WITH BOUNDS, TILES, AND geoJSON
-       var map = L.map('dope-map').fitBounds(geojson.getBounds());
+       var map = L.map('dopeMap').fitBounds(geojson.getBounds());
         tiles.addTo(map);
         geojson.addTo(map);
         });
