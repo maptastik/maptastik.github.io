@@ -159,19 +159,18 @@
               }
         }
       });
-
-      places.forEach(function(item) {
-        document.getElementById(item.id).onclick = {
-          dopeMap.ease.location({lat: item.latitude, lon: item.lon}).zoom(15);
-          return false;
-        }
-      });
-
       //DRAW MAP IN DIV WITH BOUNDS, TILES, AND geoJSON
        var map = L.map('dopeMap').fitBounds(geojson.getBounds());
         tiles.addTo(map);
         geojson.addTo(map);
         });
+
+      places.forEach(function(item) {
+        document.getElementById(item.id).onclick = {
+          map.ease.location({lat: item.latitude, lon: item.lon}).zoom(15);
+          return false;
+        }
+      });
   </script>
 </body>
 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++-->
