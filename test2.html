@@ -8,11 +8,11 @@
 <Style>
 body { margin:0; padding:0; }
 #map { position:absolute; top:0; bottom:0; width:100%; }
-#popupNested {z-index: 100;}
+#popupNested {z-index: 1000;}
 </Style>
 </Head>
 <Body>
-<Div id='map'></Div>
+<div id='map'><div>
 <a href="#popupNested" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-bars ui-btn-icon-left ui-btn-b" data-transition="pop">Choose a location...</a>
 <div data-role="popup" id="popupNested" data-theme="none">
     <div data-role="collapsibleset" data-theme="b" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" style="margin:0; width:250px;">
