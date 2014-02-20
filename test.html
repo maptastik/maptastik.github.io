@@ -139,7 +139,7 @@
     };
 
     //GET geoJSON USING jQUERY FUNCTION AND MAP IT
-     $.getJSON("./dope-places.geojson", function(data) {
+     places = $.getJSON("./dope-places.geojson", function(data) {
       var geojson = L.geoJson(data, {
         onEachFeature: function (feature, layer) {
           layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.Add);
@@ -157,6 +157,13 @@
                 case 'Other':   return {color: "#ffff33"}; //YELLOW
                 ;
               }
+        }
+      });
+
+      places.forEach(function(item) {
+        document.getElementById(item.id).onclick = {
+          dope-map.ease.location({lat: item.latitude, lon: item.lon}).zoom(15);
+          return false;
         }
       });
 
