@@ -23,7 +23,7 @@
     padding:0; 
   }
   /*MAP STYLE*/
-    #dope-map { 
+    #dopeMap { 
     position:absolute; 
     top:0; bottom:0;
     width:100%
@@ -33,7 +33,7 @@
 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 <body>
 <!--DIV CONTAINER FOR MAP-->
-<div id="dope-map"></div>
+<div id="dopeMap"></div>
 
 <!--nav tabs-->
 <a href="#popupNested" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-bars ui-btn-icon-left ui-btn-b" data-transition="pop">Choose a location...</a>
@@ -122,11 +122,11 @@
 </div><!-- /popup -->
 <!--SCRIPTS-->
   <script>
-  var map = mapbox.map('dope-map');
+  var map = mapbox.map('dopeMap');
   var layer = mapbox.layer().id('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.jpg');
   map.addLayer(layer);
   map.zoom(2);
-  var dope-places = [
+  var dopePlaces = [
   {
     "ID":1,
     "Name":"Al's Bar",
@@ -833,9 +833,9 @@
   }
 ];
 
-dope-places.forEach(function(item) {
+dopePlaces.forEach(function(item) {
   document.getElementById(item.ID).onclick=function() {
-    dope-map.ease.location({lat: item.latitude, lon: item.longitude}).zoom(15);
+    dopeMap.ease.location({lat: item.latitude, lon: item.longitude}).zoom(15);
     return false;
   }
 });
@@ -849,7 +849,7 @@ dope-places.forEach(function(item) {
     // };
 
     // //GET geoJSON USING jQUERY FUNCTION AND MAP IT
-    //  $.getJSON("./dope-places.geojson", function(data) {
+    //  $.getJSON("./dopePlaces.geojson", function(data) {
     //   var geojson = L.geoJson(data, {
     //     onEachFeature: function (feature, layer) {
     //       layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.Add);
