@@ -5,10 +5,9 @@
 <meta charset=utf-8 />
 <title>Leaflet Test</title>
 <!--LIBRARIES & EXTERNAL SHIT-->
-  <!--INCLUDE LEAFLET CSS-->
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
-  <!--INCLUDE LEAFLEET JS FILE-->
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+  <!--INCLUDE MAPBOX.JS/CSS-->
+  <Script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></Script>
+  <Link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
   <!--INCLUDE jQUERY-->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <!--INCLUDE jQUERY-MOBILE-->
@@ -24,7 +23,7 @@
     padding:0; 
   }
   /*MAP STYLE*/
-    #dopeMap { 
+    #dope-map { 
     position:absolute; 
     top:0; bottom:0;
     width:100%
@@ -34,7 +33,7 @@
 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 <body>
 <!--DIV CONTAINER FOR MAP-->
-  <div id="dopeMap"></div>
+<div id="dope-map"></div>
 
 <!--nav tabs-->
 <a href="#popupNested" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-bars ui-btn-icon-left ui-btn-b" data-transition="pop">Choose a location...</a>
@@ -123,54 +122,754 @@
 </div><!-- /popup -->
 <!--SCRIPTS-->
   <script>
-    //TILES AS A VARIABLE
-    var tiles = L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.jpg', {
-    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.</a>',
-    maxZoom: 18
-    });
+  var map = mapbox.map('dope-map');
+  var layer = mapbox.layer().id('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.jpg');
+  map.addLayer(layer);
+  map.zoom(2);
+  var = dope-places = [
+  {
+    "ID":1,
+    "Name":"Al's Bar",
+    "Add":"601 N Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Bar",
+    "latitude":38.0540372095,
+    "longitude":-84.4863908142
+  },
+  {
+    "ID":2,
+    "Name":"West Sixth Brewery",
+    "Add":"501 W 6th St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Bar",
+    "latitude":38.0598217992,
+    "longitude":-84.4917566057
+  },
+  {
+    "ID":3,
+    "Name":"The Beer Trappe",
+    "Add":"811 E Euclid Ave",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40502,
+    "Type":"Bar",
+    "latitude":38.0301511325,
+    "longitude":-84.4907633308
+  },
+  {
+    "ID":4,
+    "Name":"Side Bar Grill",
+    "Add":"147 N Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40507,
+    "Type":"Bar",
+    "latitude":38.0472217767,
+    "longitude":-84.4960186374
+  },
+  {
+    "ID":5,
+    "Name":"Lynagh's Irish Pub",
+    "Add":"384 Woodland Ave",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Bar",
+    "latitude":38.0347471876,
+    "longitude":-84.4956730903
+  },
+  {
+    "ID":6,
+    "Name":"Country Boy Brewing",
+    "Add":"436 Chair Ave",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Bar",
+    "latitude":38.0439128222,
+    "longitude":-84.5091859269
+  },
+  {
+    "ID":7,
+    "Name":"Chevy Chase Inn",
+    "Add":"833 Euclid Ave",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40502,
+    "Type":"Bar",
+    "latitude":38.0297804958,
+    "longitude":-84.4905208007
+  },
+  {
+    "ID":8,
+    "Name":"Soundbar",
+    "Add":"208 S Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Bar",
+    "latitude":38.0447983537,
+    "longitude":-84.4988914554
+  },
+  {
+    "ID":9,
+    "Name":"Grey Goose",
+    "Add":"170 Jefferson St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Bar",
+    "latitude":38.0529533348,
+    "longitude":-84.5008649232
+  },
+  {
+    "ID":10,
+    "Name":"Green Lantern",
+    "Add":"497 W 3rd St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Bar",
+    "latitude":38.0549415608,
+    "longitude":-84.4985719039
+  },
+  {
+    "ID":11,
+    "Name":"North Lime Coffee & Donuts",
+    "Add":"575 N Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Coffee",
+    "latitude":38.0538340897,
+    "longitude":-84.4864823223
+  },
+  {
+    "ID":12,
+    "Name":"Coffea",
+    "Add":"385 Rose St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Coffee",
+    "latitude":38.0381945941,
+    "longitude":-84.4994918808
+  },
+  {
+    "ID":13,
+    "Name":"Third Street Stuff & Coffee",
+    "Add":"257 N Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Coffee",
+    "latitude":38.049395,
+    "longitude":-84.492989
+  },
+  {
+    "ID":14,
+    "Name":"Student Center",
+    "Add":"404 Administrative Dr",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40506,
+    "Type":"Conference Location",
+    "latitude":38.0389273229,
+    "longitude":-84.5065237746
+  },
+  {
+    "ID":15,
+    "Name":"Gaines Center",
+    "Add":"226 E Maxwell St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40506,
+    "Type":"Conference Location",
+    "latitude":38.0408205573,
+    "longitude":-84.4983684737
+  },
+  {
+    "ID":16,
+    "Name":"Memorial Hall",
+    "Add":"",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40506,
+    "Type":"Conference Location",
+    "latitude":38.036866,
+    "longitude":-84.506453
+  },
+  {
+    "ID":17,
+    "Name":"Memorial Colliseum Parking",
+    "Add":"",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40506,
+    "Type":"Conference Location",
+    "latitude":38.04007,
+    "longitude":-84.499205
+  },
+  {
+    "ID":18,
+    "Name":"Fine Arts Library",
+    "Add":"",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40506,
+    "Type":"Conference Location",
+    "latitude":38.0372,
+    "longitude":-84.502996
+  },
+  {
+    "ID":19,
+    "Name":"White Hall Classroom Building",
+    "Add":"",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40506,
+    "Type":"Conference Location",
+    "latitude":38.038074,
+    "longitude":-84.503983
+  },
+  {
+    "ID":20,
+    "Name":"Student Center Parking",
+    "Add":"",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40506,
+    "Type":"Conference Location",
+    "latitude":38.039113,
+    "longitude":-84.502316
+  },
+  {
+    "ID":21,
+    "Name":"Parking Structure #5",
+    "Add":"",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40506,
+    "Type":"Conference Location",
+    "latitude":38.041061,
+    "longitude":-84.504948
+  },
+  {
+    "ID":22,
+    "Name":"University Inn",
+    "Add":"1229 S Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40503,
+    "Type":"Lodging",
+    "latitude":38.0285726984,
+    "longitude":-84.5109456256
+  },
+  {
+    "ID":23,
+    "Name":"Hyatt Regency Lexington",
+    "Add":"401 W High St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40507,
+    "Type":"Lodging",
+    "latitude":38.0481103533,
+    "longitude":-84.501943713
+  },
+  {
+    "ID":24,
+    "Name":"Holiday Inn Express Hotel & Suites",
+    "Add":"1000 Export St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40504,
+    "Type":"Lodging",
+    "latitude":38.036076105,
+    "longitude":-84.5135370972
+  },
+  {
+    "ID":25,
+    "Name":"Spring Hill Suites",
+    "Add":"863 S Broadway Rd",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40504,
+    "Type":"Lodging",
+    "latitude":38.0397523742,
+    "longitude":-84.5141483498
+  },
+  {
+    "ID":26,
+    "Name":"Gratz Park Inn",
+    "Add":"120 W 2nd St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40507,
+    "Type":"Lodging",
+    "latitude":38.0483797617,
+    "longitude":-84.4950894701
+  },
+  {
+    "ID":27,
+    "Name":"Blue Grass Airport",
+    "Add":"4000 Terminal Dr",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40510,
+    "Type":"Other",
+    "latitude":38.0376998931,
+    "longitude":-84.5981793759
+  },
+  {
+    "ID":28,
+    "Name":"Bourbon n' Toulouse",
+    "Add":"829 Euclid Ave",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40502,
+    "Type":"Restaurant",
+    "latitude":38.0293925041,
+    "longitude":-84.4902826814
+  },
+  {
+    "ID":29,
+    "Name":"Sav's Grill",
+    "Add":"304 S Limestone",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.0430721206,
+    "longitude":-84.5013655477
+  },
+  {
+    "ID":30,
+    "Name":"Tolly-Ho",
+    "Add":"606 S Broadway Rd",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.0436766771,
+    "longitude":-84.5074022892
+  },
+  {
+    "ID":31,
+    "Name":"Stella's Kentucky Deli",
+    "Add":"143 Jefferson St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.052792898,
+    "longitude":-84.5019636647
+  },
+  {
+    "ID":32,
+    "Name":"The Village Idiot",
+    "Add":"307 W Short St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40507,
+    "Type":"Restaurant",
+    "latitude":38.04885577,
+    "longitude":-84.4982753478
+  },
+  {
+    "ID":33,
+    "Name":"The Local Taco",
+    "Add":"315 South Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.0432513395,
+    "longitude":-84.5019708694
+  },
+  {
+    "ID":34,
+    "Name":"Mellow Mushroom",
+    "Add":"503 S Upper St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.0435305973,
+    "longitude":-84.5036391962
+  },
+  {
+    "ID":35,
+    "Name":"Great Bagel",
+    "Add":"396 Woodland Ave",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.0345452105,
+    "longitude":-84.495947892
+  },
+  {
+    "ID":36,
+    "Name":"Sam's Hot Dog Stand",
+    "Add":"109 N Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40507,
+    "Type":"Restaurant",
+    "latitude":38.0466268602,
+    "longitude":-84.4968532398
+  },
+  {
+    "ID":37,
+    "Name":"Alfalfa Restaurant",
+    "Add":"141 E Main St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40507,
+    "Type":"Restaurant",
+    "latitude":38.0456287528,
+    "longitude":-84.4962206251
+  },
+  {
+    "ID":38,
+    "Name":"Oasis Mediterranean Restaurant",
+    "Add":"868 E High St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40502,
+    "Type":"Restaurant",
+    "latitude":38.0290581223,
+    "longitude":-84.49012537
+  },
+  {
+    "ID":39,
+    "Name":"Sarah Mediterranean",
+    "Add":"319 S Limestone",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.0430945389,
+    "longitude":-84.5019604308
+  },
+  {
+    "ID":40,
+    "Name":"Doodles Restaurant",
+    "Add":"262 N Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40507,
+    "Type":"Restaurant",
+    "latitude":38.0491715915,
+    "longitude":-84.4926272722
+  },
+  {
+    "ID":41,
+    "Name":"Village Host Pizza",
+    "Add":"431 Old Vine St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40507,
+    "Type":"Restaurant",
+    "latitude":38.0400385587,
+    "longitude":-84.4917939753
+  },
+  {
+    "ID":42,
+    "Name":"Pazzo's",
+    "Add":"385 S Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.0418087139,
+    "longitude":-84.50359144
+  },
+  {
+    "ID":43,
+    "Name":"King Tut",
+    "Add":"341 S Limestone",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.0426924338,
+    "longitude":-84.5025798739
+  },
+  {
+    "ID":44,
+    "Name":"Chipotle",
+    "Add":"345 S Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.0426480563,
+    "longitude":-84.5025718033
+  },
+  {
+    "ID":45,
+    "Name":"Han Woo Ri",
+    "Add":"371 S Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.0422074152,
+    "longitude":-84.5034440442
+  },
+  {
+    "ID":46,
+    "Name":"Joe Bologna's",
+    "Add":"120 W Maxwell St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.0437267098,
+    "longitude":-84.5022939607
+  },
+  {
+    "ID":47,
+    "Name":"Bangkok House",
+    "Add":"275 Avenue of Champions",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.0387860021,
+    "longitude":-84.5008353423
+  },
+  {
+    "ID":48,
+    "Name":"UK Art Museum",
+    "Add":"405 Rose St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Conference Location",
+    "latitude":38.037969,
+    "longitude":-84.501364
+  },
+  {
+    "ID":49,
+    "Name":"Athenian Grill",
+    "Add":"313 S Ashland Ave",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40502,
+    "Type":"Restaurant",
+    "latitude":38.031369,
+    "longitude":-84.490878
+  },
+  {
+    "ID":50,
+    "Name":"Jamba Juice",
+    "Add":"535 S Upper St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.042373,
+    "longitude":-84.505165
+  },
+  {
+    "ID":51,
+    "Name":"Smashburger",
+    "Add":"535 S Upper St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.042669,
+    "longitude":-84.505265
+  },
+  {
+    "ID":52,
+    "Name":"Firehouse Subs",
+    "Add":"535 S Upper St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.042772,
+    "longitude":-84.504669
+  },
+  {
+    "ID":53,
+    "Name":"Missy's Pies",
+    "Add":"219 Woodland Ave",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40502,
+    "Type":"Restaurant",
+    "latitude":38.036486,
+    "longitude":-84.492937
+  },
+  {
+    "ID":54,
+    "Name":"Arcadium",
+    "Add":"574 N Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Bar",
+    "latitude":38.053781,
+    "longitude":-84.486463
+  },
+  {
+    "ID":55,
+    "Name":"Common Grounds",
+    "Add":"343 E High St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40507,
+    "Type":"Coffee",
+    "latitude":38.040288,
+    "longitude":-84.493978
+  },
+  {
+    "ID":56,
+    "Name":"County Club",
+    "Add":"555 S Jefferson St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.059154,
+    "longitude":-84.493018
+  },
+  {
+    "ID":57,
+    "Name":"National Boulangerie",
+    "Add":"264 Walton Ave",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40502,
+    "Type":"Coffee",
+    "latitude":38.040915,
+    "longitude":-84.480097
+  },
+  {
+    "ID":58,
+    "Name":"Wine and Market",
+    "Add":"486 W 2nd St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40507,
+    "Type":"Bar",
+    "latitude":38.053456,
+    "longitude":-84.500465
+  },
+  {
+    "ID":59,
+    "Name":"Limestone Blue",
+    "Add":"133 N Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40507,
+    "Type":"Restaurant",
+    "latitude":38.047136,
+    "longitude":-84.496129
+  },
+  {
+    "ID":60,
+    "Name":"Enoteca",
+    "Add":"191 Jefferson St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.053623,
+    "longitude":-84.500681
+  },
+  {
+    "ID":61,
+    "Name":"Saul Good",
+    "Add":"123 N Broadway",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40507,
+    "Type":"Restaurant",
+    "latitude":38.049477,
+    "longitude":-84.499531
+  },
+  {
+    "ID":62,
+    "Name":"Bombay Grill",
+    "Add":"102 W High St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40507,
+    "Type":"Restaurant",
+    "latitude":38.045155,
+    "longitude":-84.498956
+  },
+  {
+    "ID":63,
+    "Name":"El Habanero Loko",
+    "Add":"102 W Vine St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40507,
+    "Type":"Restaurant",
+    "latitude":38.045713,
+    "longitude":-84.498329
+  },
+  {
+    "ID":64,
+    "Name":"Local Taco",
+    "Add":"315 S Limestone St",
+    "City":"Lexington",
+    "State":"KY",
+    "Zip":40508,
+    "Type":"Restaurant",
+    "latitude":38.043165,
+    "longitude":-84.501859
+  }
+];
 
+dope-places.forEach(function(item) {
+  document.getElementById(item.ID).onclick=function() {
+    dope-map.ease.location({lat: item.latitude, lon: item.longitude}).zoom(15);
+    return false;
+  }
+});
     //STYLE MARKERS
-    var geojsonMarkerOptions = {
-      radius: 8,
-      color: "#000",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.8
-    };
+    // var geojsonMarkerOptions = {
+    //   radius: 8,
+    //   color: "#000",
+    //   weight: 1,
+    //   opacity: 1,
+    //   fillOpacity: 0.8
+    // };
 
-    //GET geoJSON USING jQUERY FUNCTION AND MAP IT
-     places = $.getJSON("./dope-places.geojson", function(data) {
-      var geojson = L.geoJson(data, {
-        onEachFeature: function (feature, layer) {
-          layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.Add);
-        },
-        pointToLayer: function (feature, latlng) {
-          return L.circleMarker(latlng, geojsonMarkerOptions);
-        },
-        style: function(feature) {
-            switch (feature.properties.Type) {
-                case 'Conference Location': return {color: "#4daf4a"}; //GREEN
-                case 'Restaurant':   return {color: "#e41a1c"}; //RED
-                case 'Bar': return {color: "#377eb8"}; //BLUE
-                case 'Coffee':   return {color: "#984ea3"}; //PURPLE
-                case 'Lodging': return {color: "#ff7f00"}; //ORANGE
-                case 'Other':   return {color: "#ffff33"}; //YELLOW
-                ;
-              }
-        }
-      });
-      //DRAW MAP IN DIV WITH BOUNDS, TILES, AND geoJSON
-       var map = L.map('dopeMap').fitBounds(geojson.getBounds());
-        tiles.addTo(map);
-        geojson.addTo(map);
-        });
+    // //GET geoJSON USING jQUERY FUNCTION AND MAP IT
+    //  $.getJSON("./dope-places.geojson", function(data) {
+    //   var geojson = L.geoJson(data, {
+    //     onEachFeature: function (feature, layer) {
+    //       layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.Add);
+    //     },
+    //     pointToLayer: function (feature, latlng) {
+    //       return L.circleMarker(latlng, geojsonMarkerOptions);
+    //     },
+    //     style: function(feature) {
+    //         switch (feature.properties.Type) {
+    //             case 'Conference Location': return {color: "#4daf4a"}; //GREEN
+    //             case 'Restaurant':   return {color: "#e41a1c"}; //RED
+    //             case 'Bar': return {color: "#377eb8"}; //BLUE
+    //             case 'Coffee':   return {color: "#984ea3"}; //PURPLE
+    //             case 'Lodging': return {color: "#ff7f00"}; //ORANGE
+    //             case 'Other':   return {color: "#ffff33"}; //YELLOW
+    //             ;
+    //           }
+    //     }
+    //   });
 
-      places.forEach(function(item) {
-        document.getElementById(item.ID).onclick = {
-          map.ease.location({lat: item.latitude, lon: item.lon}).zoom(15);
-          return false;
-        }
-      });
   </script>
 </body>
 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++-->
