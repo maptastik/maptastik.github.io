@@ -48,7 +48,8 @@ var dopePlaces = [
 ]
 
 L.geoJson(dopePlaces, {
-	style: function: features.properties.marker-color;
+	style: function: (feature) {
+		return {color: features.properties.marker-color};
 	};
 }).addTo(map);
 
