@@ -1,11 +1,11 @@
-<!doctype html>
-<html>
-<head>
-<meta charset=utf-8 />
-<title></title>
-  <script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
-  <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
-<style>
+<!DOCTYPE html>
+<Html>
+<Head>
+<Meta charset=utf-8 />
+<Title></Title>
+  <Script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></Script>
+  <Link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
+<Style>
 body { margin:0; padding:0; }
 #map { position:absolute; top:0; bottom:0; width:100%; }
 #map-ui {
@@ -19,17 +19,17 @@ body { margin:0; padding:0; }
 }
 #map-ui a {
   font-size:13px;
-  background:#fff;
-  color:#3c4e5a;
+  background:#FFF;
+  color:#3C4E5A;
   display:block;
   margin:0;padding:0;
-  border:1px solid #bbb;
+  border:1px solid #BBB;
   border-bottom-width:0;
   min-width:138px;
   padding:10px;
   text-decoration:none;
 }
-#map-ui a:hover { background:#ecf5fa; }
+#map-ui a:hover { background:#ECF5FA; }
 #map-ui li:last-child a {
   border-bottom-width:1px;
   -webkit-border-radius:0 0 3px 3px;
@@ -39,26 +39,26 @@ body { margin:0; padding:0; }
   -webkit-border-radius:3px 3px 0 0;
           border-radius:3px 3px 0 0;
 }
-</style>
-</head>
-<body>
-<div id='map-ui'>
-  <ul>
-    <li><a href='#' id='1'>bahamas</a></li>
-    <li><a href='#' id='2'>australia</a></li>
-    <li><a href='#' id='3'>great barrier reef</a></li>
-    <li><a href='#' id='4'>amur river</a></li>
-    <li><a href='#' id='5'>taiwan</a></li>
-    <li><a href='#' id='6'>tibet</a></li>
-    <li><a href='#' id='7'>tibet zoom</a></li>
-    <li><a href='#' id='8'>angola/namibia</a></li>
-  </ul>
-</div>
-<div id='map'></div>
-<script>
+</Style>
+</Head>
+<Body>
+<Div id='map-ui'>
+  <Ul>
+    <Li><A href='#' id='1'>Bahamas</A></Li>
+    <Li><A href='#' id='2'>Australia</A></Li>
+    <Li><A href='#' id='3'>Great Barrier Reef</A></Li>
+    <Li><A href='#' id='4'>Amur River</A></Li>
+    <Li><A href='#' id='5'>Taiwan</A></Li>
+    <Li><A href='#' id='6'>Tibet</A></Li>
+    <Li><A href='#' id='7'>Tibet Zoom</A></Li>
+    <Li><A href='#' id='8'>Angola/Namibia</A></Li>
+  </Ul>
+</Div>
+<Div id='map'></Div>
+<Script>
   var map = mapbox.map('map');
   var layer = mapbox.layer().id('maptastik.hb35690a');
-  map.addlayer(layer);
+  map.addLayer(layer);
   map.zoom(2);
   var places = [
     { place:'1', lat: 23.975507060561622, lon: -77.28332519531249, zoom:8  },
@@ -70,12 +70,12 @@ body { margin:0; padding:0; }
     { place: '7', lat: 34.40361516928514, lon: 81.07427199520984, zoom:8 },
     { place: '8', lat: -17.387337184561474, lon: 15.790100097656252, zoom:7 }
   ];
-  places.foreach(function(item){
-      document.getelementbyid(item.place).onclick = function() {
+  places.forEach(function(item){
+      document.getElementById(item.place).onclick = function() {
         map.ease.location({ lat: item.lat, lon: item.lon }).zoom(item.zoom || 7).optimal();
         return false;
       }
   });
-</script>
-</body>
-</html>
+</Script>
+</Body>
+</Html>
