@@ -26,7 +26,10 @@ body {
 <div id="map"></div>
 
 <script>
-cartodb.createVis('map', 'http://maptastik.cartodb.com/api/v2/viz/7eef23d6-9d06-11e3-bc61-0e49973114de/viz.json');
+var url = "http://maptastik.cartodb.com/api/v2/viz/7eef23d6-9d06-11e3-bc61-0e49973114de/viz.json";
+var dopeMap= cartodb.createVis('map', url);
+
+cartodb.createVis("map", url).done(function(vis, layers) {});
 </script>
 
 </body>
