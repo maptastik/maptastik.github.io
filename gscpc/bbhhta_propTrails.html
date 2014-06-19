@@ -15,31 +15,31 @@
 
 
 <style>
- .base{
+      #base{
         background: #FFFFE0;
       }
-      .streets{
+      #streets{
         background: #000;
       }
-      .legacy{
+      #legacy{
         background: #A900E6;
       }
-      .hike{
+      #hike{
         background: #C8C800;
       }
-      .bike{
+      #bike{
         background: #FFAA00;
       }
-      .horse{
+      #horse{
         background: #55FF00;
       }
-      .multi{
+      #multi{
         background: #FF00C5;
       }
-      .blueway{
+      #blueway{
         background: #005CE6;
       }
-      .heads{
+      #heads{
         background: #0000C5;
       }
 .menu-ui {
@@ -111,7 +111,8 @@ function addLayer(layer, name,abbv, zIndex) {
     // toggles layers on and off.
     var link = document.createElement('a');
         link.href = '#';
-        link.className = 'active 'abbv;
+        link.className = 'active';
+        link.className = abbv;
         link.innerHTML = name;
 
     link.onclick = function(e) {
