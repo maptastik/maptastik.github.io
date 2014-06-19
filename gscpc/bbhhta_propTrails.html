@@ -15,6 +15,11 @@
 
 
 <style>
+
+menu-stripe{
+  background-color: #fff;
+  
+}
       a.active#base{
         background: #FFFFE0;
       }
@@ -112,6 +117,9 @@ function addLayer(layer, name,abbv, zIndex) {
         .setZIndex(zIndex)
         .addTo(map);
 
+    
+    var stripe = document.createElement('div');
+        stripe.className = 'menu-stripe';    
     // Create a simple layer switcher that
     // toggles layers on and off.
     var link = document.createElement('a');
