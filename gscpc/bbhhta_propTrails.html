@@ -117,23 +117,14 @@ function addLayer(layer, name,abbv, zIndex) {
         .setZIndex(zIndex)
         .addTo(map);
 
-    
-    var stripe = document.createElement('div');
-        stripe.className = 'menu-stripe';
-        var link = document.createElement('a');
-          stripe.innerHTML = link;
-          stripe.link.href = '#';
-          stripe.link.className = 'active';
-          stripe.link.id = abbv;
-          stripe.link.innerHTML = name;
 
     // Create a simple layer switcher that
     // toggles layers on and off.
-    // var link = document.createElement('a');
-    //     link.href = '#';
-    //     link.className = 'active';
-    //     link.id = abbv;
-    //     link.innerHTML = name;
+    var link = document.createElement('a');
+        link.href = '#';
+        link.className = 'active';
+        link.id = abbv;
+        link.innerHTML = name;
 
     link.onclick = function(e) {
         e.preventDefault();
