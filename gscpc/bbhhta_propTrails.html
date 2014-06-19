@@ -62,7 +62,12 @@ var layers = document.getElementById('menu-ui');
 
 addLayer(L.mapbox.tileLayer('maptastik.georgetownBase1'), 'Base Map', 1);
 addLayer(L.mapbox.tileLayer('maptastik.ii7f0jh2'), 'Streets', 2);
-addLayer(L.mapbox.tileLayer('maptastik.legacy'), 'Legacy Trail', 3);
+addLayer(L.mapbox.tileLayer('maptastik.hike'), 'Hike', 3);
+addLayer(L.mapbox.tileLayer('maptastik.bike'), 'Bike', 4);
+addLayer(L.mapbox.tileLayer('maptastik.horse'), 'Horse', 5);
+addLayer(L.mapbox.tileLayer('mmaptastik.multi'), 'Multi-Use', 6);
+addLayer(L.mapbox.tileLayer('maptastik.blueway'), 'Blueway', 7);
+addLayer(L.mapbox.tileLayer('maptastik.trailHead'), 'Trail Heads', 8);
 
 function addLayer(layer, name, zIndex) {
     layer
