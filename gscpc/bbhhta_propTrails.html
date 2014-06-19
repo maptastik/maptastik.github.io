@@ -34,6 +34,7 @@
     border-bottom:1px solid rgba(0,0,0,0.25);
     text-align:center;
     }
+
     .menu-ui a:first-child {
       border-radius:3px 3px 0 0;
       }
@@ -52,6 +53,9 @@
       .menu-ui a.active:hover {
         background:#3074a4;
         }
+  .abbv {
+    color:#fff;
+  }
 </style>
 <nav id='menu-ui' class='menu-ui'></nav>
 <div id='map'></div>
@@ -60,23 +64,23 @@
 var map = L.map('map').setView([38.2926,-84.5769], 11);
 var layers = document.getElementById('menu-ui');
 
-addLayer(L.mapbox.tileLayer('maptastik.georgetownBase1'), 'Base Map', 1);
-addLayer(L.mapbox.tileLayer('maptastik.ii7f0jh2'), 'Streets', 2);
-addLayer(L.mapbox.tileLayer('maptastik.hike'), 'Hike', 3);
-addLayer(L.mapbox.tileLayer('maptastik.bike'), 'Bike', 4);
-addLayer(L.mapbox.tileLayer('maptastik.horse'), 'Horse', 5);
-addLayer(L.mapbox.tileLayer('maptastik.multi'), 'Multi-Use', 6);
-addLayer(L.mapbox.tileLayer('maptastik.blueway'), 'Blueway', 7);
-addLayer(L.mapbox.tileLayer('maptastik.trailHead'), 'Trail Heads', 8);
+addLayer(L.mapbox.tileLayer('maptastik.georgetownBase1'), 'Base Map', 'base', 1);
+addLayer(L.mapbox.tileLayer('maptastik.ii7f0jh2'), 'Streets', 'streets', 2);
+addLayer(L.mapbox.tileLayer('maptastik.hike'), 'Hike', 'hike', 3);
+addLayer(L.mapbox.tileLayer('maptastik.bike'), 'Bike', 'bike', 4);
+addLayer(L.mapbox.tileLayer('maptastik.horse'), 'Horse', 'horse', 5);
+addLayer(L.mapbox.tileLayer('maptastik.multi'), 'Multi-Use','multi', 6);
+addLayer(L.mapbox.tileLayer('maptastik.blueway'), 'Blueway', 'blueway', 7);
+addLayer(L.mapbox.tileLayer('maptastik.trailHead'), 'Trail Heads', 'heads', 8);
 
-function addLayer(layer, name, zIndex) {
+function addLayer(layer, name,abbv, zIndex) {
     layer
         .setZIndex(zIndex)
         .addTo(map);
 
     // Create a simple layer switcher that
     // toggles layers on and off.
-    var link = document.createElement('a');
+    var link = document.createElement('a id='abbv);
         link.href = '#';
         link.className = 'active';
         link.innerHTML = name;
