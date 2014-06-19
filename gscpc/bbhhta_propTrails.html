@@ -113,7 +113,7 @@ function addLayer(layer, name,abbv, zIndex) {
     var link = document.createElement('a');
         link.href = '#';
         link.className = 'active';
-        link.className = abbv;
+        link.id = abbv;
         link.innerHTML = name;
 
     link.onclick = function(e) {
