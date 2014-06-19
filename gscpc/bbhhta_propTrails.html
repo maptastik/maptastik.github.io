@@ -122,10 +122,10 @@ function addLayer(layer, name,abbv, zIndex) {
         stripe.className = 'menu-stripe';
         var link = document.createElement('a');
           stripe.innerHTML = link;
-          link.href = '#';
-          link.className = 'active';
-          link.id = abbv;
-          link.innerHTML = name;
+          stripe.link.href = '#';
+          stripe.link.className = 'active';
+          stripe.link.id = abbv;
+          stripe.link.innerHTML = name;
 
     // Create a simple layer switcher that
     // toggles layers on and off.
