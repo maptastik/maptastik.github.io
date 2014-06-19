@@ -80,9 +80,10 @@ function addLayer(layer, name,abbv, zIndex) {
 
     // Create a simple layer switcher that
     // toggles layers on and off.
-    var link = document.createElement('a id='abbv);
+    var link = document.createElement('a');
         link.href = '#';
         link.className = 'active';
+        link.id = abbv;
         link.innerHTML = name;
 
     link.onclick = function(e) {
