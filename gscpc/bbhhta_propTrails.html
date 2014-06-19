@@ -60,8 +60,8 @@
 var map = L.map('map').setView([38.2926,-84.5769], 14);
 var layers = document.getElementById('menu-ui');
 
-addLayer(L.mapbox.tileLayer('maptastik.ii4a3nl3'), 'Streets', 1);
-addLayer(L.mapbox.tileLayer('maptastik.georgetownBase1'), 'Scott County', 2);
+addLayer(L.mapbox.tileLayer('maptastik.georgetownBase1'), 'Base Map', 1);
+addLayer(L.mapbox.tileLayer('maptastik.ii4a3nl3'), 'Streets', 2);
 addLayer(L.mapbox.tileLayer('maptastik.legacy'), 'Legacy Trail', 3);
 
 function addLayer(layer, name, zIndex) {
