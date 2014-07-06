@@ -1,0 +1,105 @@
+.menu-ui {
+  background:#fff;
+  position:absolute;
+  top:10px;right:10px;
+  z-index:1;
+  border-radius:3px;
+  width:160px;
+  border:1px solid rgba(0,0,0,0.4);
+  }
+  .menu-ui a {
+    font-family: "Trebuchet MS", Helvetica, sans-serif; 
+    font-size:18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color:#404040;
+    text-shadow: 
+      -1px -1px 5px #fff,  
+      1px -1px 5px #fff,
+      -1px 1px 5px #fff,
+      1px 1px 5px #fff,
+      -0.5px -0.5px 0 #fff,  
+      0.5px -0.5px 0 #fff,
+      -0.5px 0.5px 0 #fff,
+      0.5px 0.5px 0 #fff;;
+    background: #fff;
+    display:block;
+    margin:0;padding:0;
+    padding:10px;
+    text-decoration:none;
+    border-bottom:1px solid rgba(0,0,0,0.25);
+    text-align:center;
+    }
+
+    .menu-ui a:first-child {
+      border-radius:3px 3px 0 0;
+      }
+    .menu-ui a:last-child {
+      border:none;
+      border-radius:0 0 3px 3px;
+      }
+    .menu-ui a:hover {
+      background:#f8f8f8;
+      color:#404040;
+      }
+    .menu-ui a.active {
+      color:#000;
+      }
+    .menu-ui a.active:hover {
+      background:#3074a4;
+      }
+a.active#base{
+  background: rgba(255,255,224,1);
+}
+a.active#streets{
+  background: rgba(171,171,171,1);
+}
+a.active#legacy{
+  background: rgba(169,0,230,1);
+}
+a.active#hike{
+  background: rgba(200,200,0,1);
+}
+a.active#bike{
+  background: rgba(255,170,0,1);
+}
+a.active#horse{
+  background: rgba(85,255,0,1);
+}
+a.active#multi{
+  background: rgba(255,0,197,1);
+}
+a.active#blueway{
+  background: rgba(0,92,230,1);
+}
+a.active#heads{
+  background: rgba(0,0,197,1);
+}
+
+a.active#base:hover{
+  background: rgba(255,255,224,0.5);
+}
+a.active#streets:hover{
+  background: rgba(171,171,171,0.5);
+}
+a.active#legacy:hover{
+  background: rgba(169,0,230,0.5);
+}
+a.active#hike:hover{
+  background: rgba(200,200,0,0.5);
+}
+a.active#bike:hover{
+  background: rgba(255,170,0,0.5);
+}
+a.active#horse:hover{
+  background: rgba(85,255,0,0.5);
+}
+a.active#multi:hover{
+  background: rgba(255,0,197,0.5);
+}
+a.active#blueway:hover{
+  background: rgba(0,92,230,0.5);
+}
+a.active#heads:hover{
+  background: rgba(0,0,197,0.5);
+}

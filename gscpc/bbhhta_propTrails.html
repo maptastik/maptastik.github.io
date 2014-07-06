@@ -5,125 +5,60 @@
 <link rel='shortcut icon' type='image/x-icon' href='/img/gsc_GIS_favicon.ico' />
 <title>BBHHTA Proposed Trails Map</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+<!-- JavaScript -->
+<!-- MapboxJS -->
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+<!-- jQuery -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<!-- jQuery UI -->
+<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+
+<!-- Temporary menu code location -->
+  <script>
+  $(function() {
+    $( "#speed" ).selectmenu();
+ 
+    $( "#files" ).selectmenu();
+ 
+    $( "#number" )
+      .selectmenu()
+      .selectmenu( "menuWidget" )
+        .addClass( "overflow" );
+  });
+  </script>
+  <style>
+    fieldset {
+      border: 0;
+    }
+    label {
+      display: block;
+      margin: 30px 0 0 0;
+    }
+    select {
+      width: 200px;
+    }
+    .overflow {
+      height: 200px;
+    }
+  </style>
+
+<!-- Begin Styles & Stylesheets -->
+<!-- Default Mapbox CSS -->
 <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+<!-- Layer toggling stylesheet -->
+<link href='/css/toggle.css' rel='stylesheet'/>
+<!-- Map style -->
 <style>
   body { margin:0; padding:0; }
   #map { position:absolute; top:0; bottom:0; width:100%; }
 </style>
+<!-- End Styles & Stylesheets -->
+
 </head>
 <body>
 
-
-<style>
-
-.menu-ui {
-  background:#fff;
-  position:absolute;
-  top:10px;right:10px;
-  z-index:1;
-  border-radius:3px;
-  width:160px;
-  border:1px solid rgba(0,0,0,0.4);
-  }
-  .menu-ui a {
-    font-family: "Trebuchet MS", Helvetica, sans-serif; 
-    font-size:18px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color:#404040;
-    text-shadow: 
-      -1px -1px 5px #fff,  
-      1px -1px 5px #fff,
-      -1px 1px 5px #fff,
-      1px 1px 5px #fff,
-      -0.5px -0.5px 0 #fff,  
-      0.5px -0.5px 0 #fff,
-      -0.5px 0.5px 0 #fff,
-      0.5px 0.5px 0 #fff;;
-    background: #fff;
-    display:block;
-    margin:0;padding:0;
-    padding:10px;
-    text-decoration:none;
-    border-bottom:1px solid rgba(0,0,0,0.25);
-    text-align:center;
-    }
-
-    .menu-ui a:first-child {
-      border-radius:3px 3px 0 0;
-      }
-    .menu-ui a:last-child {
-      border:none;
-      border-radius:0 0 3px 3px;
-      }
-    .menu-ui a:hover {
-      background:#f8f8f8;
-      color:#404040;
-      }
-    .menu-ui a.active {
-      color:#000;
-      }
-    .menu-ui a.active:hover {
-      background:#3074a4;
-      }
-a.active#base{
-  background: rgba(255,255,224,1);
-}
-a.active#streets{
-  background: rgba(171,171,171,1);
-}
-a.active#legacy{
-  background: rgba(169,0,230,1);
-}
-a.active#hike{
-  background: rgba(200,200,0,1);
-}
-a.active#bike{
-  background: rgba(255,170,0,1);
-}
-a.active#horse{
-  background: rgba(85,255,0,1);
-}
-a.active#multi{
-  background: rgba(255,0,197,1);
-}
-a.active#blueway{
-  background: rgba(0,92,230,1);
-}
-a.active#heads{
-  background: rgba(0,0,197,1);
-}
-
-a.active#base:hover{
-  background: rgba(255,255,224,0.5);
-}
-a.active#streets:hover{
-  background: rgba(171,171,171,0.5);
-}
-a.active#legacy:hover{
-  background: rgba(169,0,230,0.5);
-}
-a.active#hike:hover{
-  background: rgba(200,200,0,0.5);
-}
-a.active#bike:hover{
-  background: rgba(255,170,0,0.5);
-}
-a.active#horse:hover{
-  background: rgba(85,255,0,0.5);
-}
-a.active#multi:hover{
-  background: rgba(255,0,197,0.5);
-}
-a.active#blueway:hover{
-  background: rgba(0,92,230,0.5);
-}
-a.active#heads:hover{
-  background: rgba(0,0,197,0.5);
-}
-
-</style>
 <nav id='menu-ui' class='menu-ui'></nav>
 <div id='map'></div>
 
@@ -171,6 +106,60 @@ function addLayer(layer, name,abbv, zIndex) {
     layers.appendChild(link);
 }
 </script>
+
+<div class="demo">
+ 
+<form action="#">
+ 
+  <fieldset>
+    <label for="speed">Select a speed</label>
+    <select name="speed" id="speed">
+      <option>Slower</option>
+      <option>Slow</option>
+      <option selected="selected">Medium</option>
+      <option>Fast</option>
+      <option>Faster</option>
+    </select>
+ 
+    <label for="files">Select a file</label>
+    <select name="files" id="files">
+      <optgroup label="Scripts">
+        <option value="jquery">jQuery.js</option>
+        <option value="jqueryui">ui.jQuery.js</option>
+      </optgroup>
+      <optgroup label="Other files">
+        <option value="somefile">Some unknown file</option>
+        <option value="someotherfile">Some other file with a very long option text</option>
+      </optgroup>
+    </select>
+ 
+    <label for="number">Select a number</label>
+    <select name="number" id="number">
+      <option>1</option>
+      <option selected="selected">2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+      <option>13</option>
+      <option>14</option>
+      <option>15</option>
+      <option>16</option>
+      <option>17</option>
+      <option>18</option>
+      <option>19</option>
+    </select>
+  </fieldset>
+ 
+</form>
+ 
+</div>
 
 
 </body>
