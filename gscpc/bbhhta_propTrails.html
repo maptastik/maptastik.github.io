@@ -52,6 +52,7 @@ document.getElementById('navigation').onclick = function(a) {
     console.log(zoom);
     if (pos) {
         var loc = pos.split(',');
+        console.log(loc);
         map.setView(loc + ',' + zoom);
     }
 }
