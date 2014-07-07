@@ -55,7 +55,7 @@ document.getElementById('navigation').onclick = function(a) {
     console.log(lon);
     var zoom = a.target.getAttribute('data-zoom');
     console.log(zoom);
-    if (lat && lon && zoom) {
+    // if (lat && lon && zoom) {
         // var loc = pos.split(',');
         // console.log(loc);
         map.setView('[' + lat + ',' + lon + '],' + zoom);
