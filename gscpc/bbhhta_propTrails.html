@@ -41,13 +41,16 @@
 <div id='map'></div>
 
 <script>
-// Set initial view of map
+// Begin set-up of basic map properties
+// Initial view of map
 var map = L.map('map').setView([38.2926,-84.5769], 11);
-
+// Max zoom
 map.options.maxZoom = 16;
+//Min Zoom
 map.options.minZoom = 11;
 // Place zoom control in bottom-left corner
 map.zoomControl.setPosition('bottomleft');
+//End set-up of basic map properties
 
 // City Zoom code begin
 document.getElementById('navigation').onclick = function(a) {
