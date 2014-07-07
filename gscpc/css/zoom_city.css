@@ -1,13 +1,13 @@
-.menu-ui {
+.city-ui {
   background:#fff;
   position:absolute;
-  top:10px;right:10px;
+  top:-10px;right:-10px;
   z-index:1;
   border-radius:3px;
   width:120px;
   border:1px solid rgba(0,0,0,0.4);
   }
-  .menu-ui a {
+  .city-ui a {
     font-size:13px;
     color:#404040;
     display:block;
@@ -17,14 +17,14 @@
     border-bottom:1px solid rgba(0,0,0,0.25);
     text-align:center;
     }
-    .menu-ui a:first-child {
+    .city-ui a:first-child {
       border-radius:3px 3px 0 0;
       }
-    .menu-ui a:last-child {
+    .city-ui a:last-child {
       border:none;
       border-radius:0 0 3px 3px;
       }
-    .menu-ui a:hover {
+    .city-ui a:hover {
       background:#f8f8f8;
       color:#404040;
       }
