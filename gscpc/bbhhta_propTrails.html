@@ -40,9 +40,9 @@
 var map = L.map('map').setView([38.2926,-84.5769], 11);
 
 // zoom code begin
-document.getElementById('navigation').onclick = function(e) {
-    e.preventDefault();
-    var pos = e.target.getAttribute('data-position');
+document.getElementById('navigation').onclick = function(a) {
+    a.preventDefault();
+    var pos = a.target.getAttribute('data-position');
     if (pos) {
         var loc = pos.split(',');
         map.setView(loc, 11);
