@@ -42,6 +42,7 @@
 <script>
 var map = L.map('map').setView([38.2926,-84.5769], 11);
 
+map.zoomControl.setPosition('bottomleft');
 // zoom code begin
 document.getElementById('navigation').onclick = function(a) {
     a.preventDefault();
