@@ -49,17 +49,23 @@ document.getElementById('navigation').onclick = function(a) {
     a.preventDefault();
     // var pos = a.target.getAttribute('data-position');
     // var zoom = a.target.getAttribute('data-zoom');
+    var latlon = [];
+
     var lat = a.target.getAttribute('data-lat');
     console.log(typeof lat);
     console.log(lat);
     lat = Number(lat);
     console.log(typeof lat);
+    latlon[0]=lat;
+    console.log(latlon);
 
     var lon = a.target.getAttribute('data-lon');
     console.log(typeof lon);
     console.log(lon);
-    lat = Number(lon);
+    lon = Number(lon);
     console.log(typeof lon);
+    latlon[1]=lon;
+    console.log(latlon);
 
     var zoom = a.target.getAttribute('data-zoom');
     console.log(typeof zoom);
@@ -69,7 +75,7 @@ document.getElementById('navigation').onclick = function(a) {
     // if (lat && lon && zoom) {
         // var loc = pos.split(',');
         // console.log(loc);
-        map.setView(lat + ',' + lon + ',' + zoom);
+        map.setView(latlon, zoom);
     // }
 }
 // zoom code end
