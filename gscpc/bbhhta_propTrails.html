@@ -44,6 +44,8 @@
 // Set initial view of map
 var map = L.map('map').setView([38.2926,-84.5769], 11);
 
+map.options.maxZoom = 16;
+map.options.minZoom = 11;
 // Place zoom control in bottom-left corner
 map.zoomControl.setPosition('bottomleft');
 
