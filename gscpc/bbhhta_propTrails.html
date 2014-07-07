@@ -41,45 +41,47 @@
 <div id='map'></div>
 
 <script>
+// Set initial view of map
 var map = L.map('map').setView([38.2926,-84.5769], 11);
 
+// Place zoom control in bottom-left corner
 map.zoomControl.setPosition('bottomleft');
-// zoom code begin
+
+// City Zoom code begin
 document.getElementById('navigation').onclick = function(a) {
     a.preventDefault();
-    // var pos = a.target.getAttribute('data-position');
-    // var zoom = a.target.getAttribute('data-zoom');
+    // Create empty array to store lat and lon
     var latlon = [];
 
+    // Getting lat
+    // Get lat value from 'data-lat'
     var lat = a.target.getAttribute('data-lat');
-    console.log(typeof lat);
-    console.log(lat);
+    // It seems lat is stored as a string, but we need it to be an int
     lat = Number(lat);
-    console.log(typeof lat);
+    // Place lat in the first position of array latlon
     latlon[0]=lat;
-    console.log(latlon);
 
+    // Getting lon
+    // Get lon value from 'data-lon'
     var lon = a.target.getAttribute('data-lon');
-    console.log(typeof lon);
-    console.log(lon);
+    // Convert lon from string to int
     lon = Number(lon);
-    console.log(typeof lon);
+    // Put lon into second position of array latlon
     latlon[1]=lon;
-    console.log(latlon);
 
+    // Getting zoom
+    // Get zoom value from 'data-zoom'
     var zoom = a.target.getAttribute('data-zoom');
-    console.log(typeof zoom);
-    console.log(zoom);
+    // Convert zoom from string to int
     zoom=Number(zoom);
-    console.log(typeof zoom);
-    // if (lat && lon && zoom) {
-        // var loc = pos.split(',');
-        // console.log(loc);
-        map.setView(latlon, zoom);
-    // }
-}
-// zoom code end
 
+    // FINALLY! The latlon array go into the first position and the zoom value goes into the second position
+    // setView(<LatLng> center,<Number> zoom?,<zoom/pan options> options? )
+    map.setView(latlon, zoom);
+}
+// City Zoom code end
+
+// Begin adding tileLayers and making them toggleable
 var layers = document.getElementById('menu-ui');
 
 addLayer(L.mapbox.tileLayer('maptastik.georgetownBase1'), 'Base Map', 'base', 1);
