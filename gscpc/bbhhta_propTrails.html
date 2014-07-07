@@ -57,7 +57,6 @@ document.getElementById('navigation').onclick = function(a) {
     a.preventDefault();
     // Create empty array to store lat and lon
     var latlon = [];
-
     // Getting lat
     // Get lat value from 'data-lat'
     var lat = a.target.getAttribute('data-lat');
@@ -65,7 +64,6 @@ document.getElementById('navigation').onclick = function(a) {
     lat = Number(lat);
     // Place lat in the first position of array latlon
     latlon[0]=lat;
-
     // Getting lon
     // Get lon value from 'data-lon'
     var lon = a.target.getAttribute('data-lon');
@@ -73,13 +71,11 @@ document.getElementById('navigation').onclick = function(a) {
     lon = Number(lon);
     // Put lon into second position of array latlon
     latlon[1]=lon;
-
     // Getting zoom
     // Get zoom value from 'data-zoom'
     var zoom = a.target.getAttribute('data-zoom');
     // Convert zoom from string to int
     zoom=Number(zoom);
-
     // FINALLY! The latlon array go into the first position and the zoom value goes into the second position
     // setView(<LatLng> center,<Number> zoom?,<zoom/pan options> options? )
     map.setView(latlon, zoom);
