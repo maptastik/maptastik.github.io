@@ -54,6 +54,18 @@
 <body>
 
 <nav id='menu-ui' class='menu-ui'></nav>
+<div class="menu" id='navigation'>
+  <form action="#"> 
+    <fieldset>
+      <label for="city">Select a city</label>
+      <select name="city" id="city">
+        <option data-position='38.21, -84.56'>Georgetown</option>
+        <option>Sadieville</option>
+        <option>Stamping Ground</option>
+        <option selected="selected">Scott County</option>
+      </select>
+  </form> 
+</div>
 <div id='map'></div>
 
 <script>
@@ -100,25 +112,6 @@ function addLayer(layer, name,abbv, zIndex) {
     layers.appendChild(link);
 }
 
-
-</script>
-
-
-<div class="menu" id='navigation'>
-<form action="#"> 
-  <fieldset>
-    <label for="city">Select a city</label>
-    <select name="city" id="city">
-      <option><a href='a' data-position='38.21, -84.56'>Georgetown</a></option>
-      <option>Sadieville</option>
-      <option>Stamping Ground</option>
-      <option selected="selected">Scott County</option>
-    </select>
-</form>
- 
-</div>
-
-<script>
 // Trying to add zoom on selection functionality
 document.getElementById('navigation').onclick = function(cities) {
     cities.preventDefault();
@@ -129,5 +122,6 @@ document.getElementById('navigation').onclick = function(cities) {
     }
 }
 </script>
+
 </body>
 </html>
