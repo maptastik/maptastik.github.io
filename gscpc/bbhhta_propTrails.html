@@ -106,7 +106,7 @@ document.getElementById('navigation').onclick = function(e) {
     var pos = e.target.getAttribute('data-position');
     if (pos) {
         var loc = pos.split(',');
-        map.setView(loc, 11);
+        map.setView(loc, 13);
     }
 }
 </script>
@@ -118,7 +118,7 @@ document.getElementById('navigation').onclick = function(e) {
     <label for="city">Select a city</label>
     <select name="city" id="city">
       <option><a href='a' data-position='38.21, -84.56'>Georgetown</a></option>
-      <option>SadieVille</option>
+      <option>Sadieville</option>
       <option>Stamping Ground</option>
       <option selected="selected">Scott County</option>
     </select>
