@@ -32,9 +32,10 @@
 <nav id='menu-ui' class='menu-ui'></nav>
 <!-- city zoomer -->
 <div id='navigation' class='city-ui'>
-  <a href='#' data-position='38.21,-84.559'>Georgetown</a>
-  <a href='#' data-position='38.39,-84.537'>Sadieville</a>
-  <a href='#' data-position='38.27,-84.686'>Stamping Ground</a>
+  <a href='#' data-position='38.21,-84.559,14'>Georgetown</a>
+  <a href='#' data-position='38.39,-84.537,15'>Sadieville</a>
+  <a href='#' data-position='38.27,-84.686,15'>Stamping Ground</a>
+  <a href='#' data-position='38.2926,-84.5769,11'>Full Extent</a>
 </div>
 <!-- the map itself -->
 <div id='map'></div>
@@ -49,7 +50,7 @@ document.getElementById('navigation').onclick = function(a) {
     var pos = a.target.getAttribute('data-position');
     if (pos) {
         var loc = pos.split(',');
-        map.setView(loc, 15);
+        map.setView(loc);
     }
 }
 // zoom code end
