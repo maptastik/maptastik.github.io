@@ -9,34 +9,7 @@
 <!-- JavaScript -->
 <!-- MapboxJS -->
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
-<!-- jQuery -->
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<!-- jQuery UI -->
-<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 
-<!-- Temporary menu code location -->
-  <script>
-  $(function() {
-    $( "#city" ).selectmenu();
- 
-  });
-  </script>
-  <style>
-    fieldset {
-      border: 0;
-    }
-    label {
-      display: block;
-      margin: 30px 0 0 0;
-    }
-    select {
-      width: 200px;
-    }
-    .overflow {
-      height: 200px;
-    }
-  </style>
 
 <!-- Begin Styles & Stylesheets -->
 <!-- Default Mapbox CSS -->
@@ -54,18 +27,6 @@
 <body>
 
 <nav id='menu-ui' class='menu-ui'></nav>
-<div class="menu" id='navigation'>
-  <form action="#"> 
-    <fieldset>
-      <label for="city">Select a city</label>
-      <select name="city" id="city">
-        <option>Georgetown</option>
-        <option>Sadieville</option>
-        <option>Stamping Ground</option>
-        <option selected="selected">Scott County</option>
-      </select>
-  </form> 
-</div>
 <div id='map'></div>
 
 <script>
@@ -110,16 +71,6 @@ function addLayer(layer, name,abbv, zIndex) {
     };
 
     layers.appendChild(link);
-}
-
-// Trying to add zoom on selection functionality
-document.getElementById('navigation').onclick = function(cities) {
-    cities.preventDefault();
-    var pos = cities.target.getAttribute('data-position');
-    if (pos) {
-        var loc = pos.split(',');
-        map.setView(loc, 13);
-    }
 }
 </script>
 
