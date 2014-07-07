@@ -59,7 +59,7 @@
     <fieldset>
       <label for="city">Select a city</label>
       <select name="city" id="city">
-        <option data-position='38.21, -84.56'>Georgetown</option>
+        <option>Georgetown</option>
         <option>Sadieville</option>
         <option>Stamping Ground</option>
         <option selected="selected">Scott County</option>
@@ -112,15 +112,15 @@ function addLayer(layer, name,abbv, zIndex) {
     layers.appendChild(link);
 }
 
-// Trying to add zoom on selection functionality
-// document.getElementById('navigation').onclick = function(cities) {
-//     cities.preventDefault();
-//     var pos = cities.target.getAttribute('data-position');
-//     if (pos) {
-//         var loc = pos.split(',');
-//         map.setView(loc, 13);
-//     }
-// }
+Trying to add zoom on selection functionality
+document.getElementById('navigation').onclick = function(cities) {
+    cities.preventDefault();
+    var pos = cities.target.getAttribute('data-position');
+    if (pos) {
+        var loc = pos.split(',');
+        map.setView(loc, 13);
+    }
+}
 </script>
 
 </body>
