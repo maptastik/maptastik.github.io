@@ -50,11 +50,22 @@ document.getElementById('navigation').onclick = function(a) {
     // var pos = a.target.getAttribute('data-position');
     // var zoom = a.target.getAttribute('data-zoom');
     var lat = a.target.getAttribute('data-lat');
+    console.log(typeof lat);
     console.log(lat);
+    lat = Number(lat);
+    console.log(typeof lat);
+
     var lon = a.target.getAttribute('data-lon');
+    console.log(typeof lon);
     console.log(lon);
+    lat = Number(lon);
+    console.log(typeof lon);
+
     var zoom = a.target.getAttribute('data-zoom');
+    console.log(typeof zoom);
     console.log(zoom);
+    zoom=Number(zoom);
+    console.log(typeof zoom);
     // if (lat && lon && zoom) {
         // var loc = pos.split(',');
         // console.log(loc);
