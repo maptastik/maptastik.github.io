@@ -32,10 +32,10 @@
 <nav id='menu-ui' class='menu-ui'></nav>
 <!-- city zoomer -->
 <div id='navigation' class='city-ui'>
-  <a href='#' data-position='38.21,-84.559' data-zoom='14'>Georgetown</a>
-  <a href='#' data-position='38.39,-84.537' data-zoom='15'>Sadieville</a>
-  <a href='#' data-position='38.27,-84.686'data-zoom='15'>Stamping Ground</a>
-  <a href='#' data-position='38.2926,-84.5769' data-zoom='11'>Full Extent</a>
+  <a href='#' data-lat='38.21' data-lon='-84.559' data-zoom='14'>Georgetown</a>
+  <a href='#' data-lat='38.39' data-lon='-84.537' data-zoom='15'>Sadieville</a>
+  <a href='#' data-lat='38.27' data-lon='-84.686' data-zoom='15'>Stamping Ground</a>
+  <a href='#' data-lat='38.2926' data-lon='-84.5769' data-zoom='11'>Full Extent</a>
 </div>
 <!-- the map itself -->
 <div id='map'></div>
@@ -47,13 +47,18 @@ map.zoomControl.setPosition('bottomleft');
 // zoom code begin
 document.getElementById('navigation').onclick = function(a) {
     a.preventDefault();
-    var pos = a.target.getAttribute('data-position');
+    // var pos = a.target.getAttribute('data-position');
+    // var zoom = a.target.getAttribute('data-zoom');
+    var lat = a.target.getAttribute('data-lat');
+    console.log(lat);
+    var lon = a.target.getAttribute('data-lon');
+    console.log(lon);
     var zoom = a.target.getAttribute('data-zoom');
     console.log(zoom);
-    if (pos) {
-        var loc = pos.split(',');
-        console.log(loc);
-        map.setView(loc + ',' + zoom);
+    if (lat && lon && zoom) {
+        // var loc = pos.split(',');
+        // console.log(loc);
+        map.setView('[' + lat + ',' + lon + '],' + zoom);
     }
 }
 // zoom code end
