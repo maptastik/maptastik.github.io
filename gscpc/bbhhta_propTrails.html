@@ -113,14 +113,14 @@ function addLayer(layer, name,abbv, zIndex) {
 }
 
 // Trying to add zoom on selection functionality
-document.getElementById('navigation').onclick = function(cities) {
-    cities.preventDefault();
-    var pos = cities.target.getAttribute('data-position');
-    if (pos) {
-        var loc = pos.split(',');
-        map.setView(loc, 13);
-    }
-}
+// document.getElementById('navigation').onclick = function(cities) {
+//     cities.preventDefault();
+//     var pos = cities.target.getAttribute('data-position');
+//     if (pos) {
+//         var loc = pos.split(',');
+//         map.setView(loc, 13);
+//     }
+// }
 </script>
 
 </body>
