@@ -15,14 +15,14 @@
     letter-spacing: 2px;
     color:#404040;
     text-shadow:
-      0.75px 0.75px 0 #fff,
-      -0.75px -0.75px 0 #fff,
-      0.75px -0.75px 0 #fff,
-      -0.75px 0.75px 0 #fff,
-      0px 0.75px 0 #fff,
-      0.75px 0px 0 #fff,
-      0px -0.75px 0 #fff,
-      -0.75px 0px 0 #fff;
+      0.5px 0.5px 0 #fff,
+      -0.5px -0.5px 0 #fff,
+      0.5px -0.5px 0 #fff,
+      -0.5px 0.5px 0 #fff,
+      0px 0.5px 0 #fff,
+      0.5px 0px 0 #fff,
+      0px -0.5px 0 #fff,
+      -0.5px 0px 0 #fff;
     /*text-shadow: 
       -1px -1px 5px #fff,  
       1px -1px 5px #fff,
