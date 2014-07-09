@@ -9,12 +9,17 @@
   }
   .menu-ui a {
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    /*font-family: "Trebuchet MS", Helvetica, sans-serif; */
+    font-family: "Trebuchet MS", Helvetica, sans-serif; 
     font-size:18px;
     font-weight: bold;
     letter-spacing: 2px;
     color:#404040;
     text-shadow: 
+      -0.5px -0.5px 0 #fff,  
+      0.5px -0.5px 0 #fff,
+      -0.5px 0.5px 0 #fff,
+      0.5px 0.5px 0 #fff;
+    /*text-shadow: 
       -1px -1px 5px #fff,  
       1px -1px 5px #fff,
       -1px 1px 5px #fff,
@@ -22,7 +27,7 @@
       -0.5px -0.5px 0 #fff,  
       0.5px -0.5px 0 #fff,
       -0.5px 0.5px 0 #fff,
-      0.5px 0.5px 0 #fff;;
+      0.5px 0.5px 0 #fff;*/
     background: #fff;
     display:block;
     margin:0;padding:0;
