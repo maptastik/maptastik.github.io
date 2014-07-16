@@ -44,11 +44,11 @@ function sidebarClick(id) {
 }
 
 /* Basemap Layers */
-var mapquestOSM = L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png", {
+var osmSTD = L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   minZoom: 10,
   maxZoom: 16,
-  subdomains: ["otile1", "otile2", "otile3", "otile4"],
-  attribution: 'Tiles courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">. Map data (c) <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, CC-BY-SA.'
+  subdomains: ["a", "b", "c", "d"],
+  attribution: 'Map tiles and data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
 });
 var stamenTER = L.tileLayer("http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg", {
   minZoom: 10,
@@ -266,7 +266,7 @@ $.getJSON("data/DOITT_MUSEUM_01_13SEPT2010.geojson", function (data) {
 map = L.map("map", {
   zoom: 11,
   center: [38.2926,-84.5769],
-  layers: [mapquestOSM, hike, bike, horse, multi, blueway, legacy, markerClusters, highlight],
+  layers: [osmSTD, hike, bike, horse, multi, blueway, legacy, markerClusters, highlight],
   zoomControl: false,
   attributionControl: false
 });
@@ -370,7 +370,7 @@ if (document.body.clientWidth <= 767) {
 }
 
 var baseLayers = {
-  "Street Map": mapquestOSM,
+  "Street Map": osmSTD,
   "Terrain": stamenTER,
   "Imagery with Streets": mapquestHYB
 };
