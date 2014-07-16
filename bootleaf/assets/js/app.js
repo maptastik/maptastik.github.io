@@ -169,7 +169,7 @@ var markerClusters = new L.MarkerClusterGroup({
 });
 
 /* Empty layer placeholder to add to layer control for listening when to add/remove trailHead to markerClusters layer NOT SURE I NEED THIS */
-var trailHeadLayer = L.geoJson(null);
+var trailHeadsLayer = L.geoJson(null);
 var trailHeads = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
