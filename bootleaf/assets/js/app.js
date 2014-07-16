@@ -91,7 +91,7 @@ $.getJSON("data/hike.geojson", function (data) {
 var bike = L.geoJson(null, {
   style: function (feature) {
       return {
-        color: "#ffff00",
+        color: "#abcdef",
         weight: 3,
         opacity: 1
       };
