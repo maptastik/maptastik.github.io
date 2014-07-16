@@ -1,4 +1,4 @@
-var map, theaterSearch = [], museumSearch = [];
+var map, trailHeadSearch = [], museumSearch = [];
 
 $(document).ready(function() {
   getViewport();
@@ -35,7 +35,7 @@ function sidebarClick(id) {
     sidebar.hide();
     getViewport();
   }
-  map.addLayer(theaterLayer).addLayer(museumLayer);
+  map.addLayer(trailHeadsLayer).addLayer(museumLayer);
   var layer = markerClusters.getLayer(id);
   markerClusters.zoomToShowLayer(layer, function() {
     map.setView([layer.getLatLng().lat, layer.getLatLng().lng], 18);
@@ -168,9 +168,9 @@ var markerClusters = new L.MarkerClusterGroup({
   disableClusteringAtZoom: 16
 });
 
-/* Empty layer placeholder to add to layer control for listening when to add/remove theaters to markerClusters layer */
-var theaterLayer = L.geoJson(null);
-var theaters = L.geoJson(null, {
+/* Empty layer placeholder to add to layer control for listening when to add/remove trailHead to markerClusters layer NOT SURE I NEED THIS */
+var trailHeadLayer = L.geoJson(null);
+var trailHeads = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
@@ -179,16 +179,14 @@ var theaters = L.geoJson(null, {
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
       }),
-      title: feature.properties.NAME,
+      title: feature.properties.Trail_Head,
       riseOnHover: true
     });
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Name</th><td>" + feature.properties.NAME + "</td></tr>" + "<tr><th>Phone</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Address</th><td>" + feature.properties.ADDRESS1 + "</td></tr>" + "<tr><th>Website</th><td><a class='url-break' href='" + feature.properties.URL + "' target='_blank'>" + feature.properties.URL + "</a></td></tr>" + "<table>";
-      layer.on({
-        click: function (e) {
-          $("#feature-title").html(feature.properties.NAME);
+      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Name</th><td>" + feature.properties.Trail_Head + "</td></tr></table>"
+          $("#feature-title").html(feature.properties.Trail_Head);
           $("#feature-info").html(content);
           $("#featureModal").modal("show");
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
@@ -200,10 +198,9 @@ var theaters = L.geoJson(null, {
         }
       });
       $("#theater-table tbody").append('<tr style="cursor: pointer;" onclick="sidebarClick('+L.stamp(layer)+'); return false;"><td class="theater-name">'+layer.feature.properties.NAME+'<i class="fa fa-chevron-right pull-right"></td></tr>');
-      theaterSearch.push({
-        name: layer.feature.properties.NAME,
-        address: layer.feature.properties.ADDRESS1,
-        source: "Theaters",
+      trailHeads.push({
+        name: layer.feature.properties.Trail_Head,
+        source: "Trail Heads",
         id: L.stamp(layer),
         lat: layer.feature.geometry.coordinates[1],
         lng: layer.feature.geometry.coordinates[0]
@@ -211,9 +208,9 @@ var theaters = L.geoJson(null, {
     }
   }
 });
-$.getJSON("data/DOITT_THEATER_01_13SEPT2010.geojson", function (data) {
-  theaters.addData(data);
-  map.addLayer(theaterLayer);
+$.getJSON("data/trailHeads.geojson", function (data) {
+  trailHeads.addData(data);
+  map.addLayer(trailHeadsLayer);
 });
 
 /* Empty layer placeholder to add to layer control for listening when to add/remove museums to markerClusters layer */
@@ -273,8 +270,8 @@ map = L.map("map", {
 
 /* Layer control listeners that allow for a single markerClusters layer */
 map.on("overlayadd", function(e) {
-  if (e.layer === theaterLayer) {
-    markerClusters.addLayer(theaters);
+  if (e.layer === trailHeadsLayer) {
+    markerClusters.addLayer(trailHeads);
   }
   if (e.layer === museumLayer) {
     markerClusters.addLayer(museums);
@@ -282,8 +279,8 @@ map.on("overlayadd", function(e) {
 });
 
 map.on("overlayremove", function(e) {
-  if (e.layer === theaterLayer) {
-    markerClusters.removeLayer(theaters);
+  if (e.layer === trailHeadsLayer) {
+    markerClusters.removeLayer(trailHeads);
   }
   if (e.layer === museumLayer) {
     markerClusters.removeLayer(museums);
@@ -377,7 +374,7 @@ var baseLayers = {
 
 var groupedOverlays = {
   "Points of Interest": {
-    "<img src='assets/img/theater.png' width='24' height='28'>&nbsp;Theaters": theaterLayer,
+    "<img src='assets/img/theater.png' width='24' height='28'>&nbsp;Trail Heads": trailHeadsLayer,
     "<img src='assets/img/museum.png' width='24' height='28'>&nbsp;Museums": museumLayer
   },
   "Trails": {
@@ -405,16 +402,16 @@ $(document).one("ajaxStop", function () {
   map.fitBounds(hike.getBounds());
   $("#loading").hide();
 
-  var theatersBH = new Bloodhound({
-    name: "Theaters",
+  var trailHeadssBH = new Bloodhound({
+    name: "Trail Heads",
     datumTokenizer: function (d) {
       return Bloodhound.tokenizers.whitespace(d.name);
     },
     queryTokenizer: Bloodhound.tokenizers.whitespace,
-    local: theaterSearch,
+    local: trailHeadSearch,
     limit: 10
   });
-  var theaterList = new List("theaters", {valueNames: ["theater-name"]}).sort("theater-name", {order:"asc"});
+  var trailHeadsList = new List("trailHeads", {valueNames: ["Trail_Head"]}).sort("Trail_Head", {order:"asc"});
 
   var museumsBH = new Bloodhound({
     name: "Museums",
@@ -457,7 +454,7 @@ $(document).one("ajaxStop", function () {
     },
     limit: 10
   });
-  theatersBH.initialize();
+  trailHeadsBH.initialize();
   museumsBH.initialize();
   geonamesBH.initialize();
 
@@ -467,11 +464,11 @@ $(document).one("ajaxStop", function () {
     highlight: true,
     hint: false
   }, {
-    name: "Theaters",
+    name: "Trail Heads",
     displayKey: "name",
-    source: theatersBH.ttAdapter(),
+    source: trailHeadsBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/theater.png' width='24' height='28'>&nbsp;Theaters</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/theater.png' width='24' height='28'>&nbsp;Trail Heads</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
@@ -490,9 +487,9 @@ $(document).one("ajaxStop", function () {
       header: "<h4 class='typeahead-header'><img src='assets/img/globe.png' width='25' height='25'>&nbsp;GeoNames</h4>"
     }
   }).on("typeahead:selected", function (obj, datum) {
-    if (datum.source === "Theaters") {
-      if (!map.hasLayer(theaterLayer)) {
-        map.addLayer(theaterLayer);
+    if (datum.source === "Trail Heads") {
+      if (!map.hasLayer(trailHeadsLayer)) {
+        map.addLayer(trailHeadsLayer);
       }
       map.setView([datum.lat, datum.lng], 17);
       if (map._layers[datum.id]) {
