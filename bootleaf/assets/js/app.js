@@ -53,7 +53,7 @@ var mapquestOSM = L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.
 var stamenTER = L.tileLayer("http://{s}.stamen.com/terrain/{z}/{x}/{y}.jpg", {
   minZoom: 10,
   maxZoom: 16,
-  subdomains: ["oatile1", "oatile2", "oatile3", "oatile4"],
+  // subdomains: ["oatile1", "oatile2", "oatile3", "oatile4"],
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
 });
 var mapquestHYB = L.layerGroup([L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg", {
@@ -371,7 +371,7 @@ if (document.body.clientWidth <= 767) {
 
 var baseLayers = {
   "Street Map": mapquestOSM,
-  "Terrainy": stamenTER,
+  "Terrain": stamenTER,
   "Imagery with Streets": mapquestHYB
 };
 
