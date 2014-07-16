@@ -47,7 +47,7 @@ function sidebarClick(id) {
 var osmSTD = L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   minZoom: 10,
   maxZoom: 16,
-  subdomains: ["a", "b", "c", "d"],
+  subdomains: ["a", "b", "c"],
   attribution: 'Map tiles and data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
 });
 var stamenTER = L.tileLayer("http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg", {
