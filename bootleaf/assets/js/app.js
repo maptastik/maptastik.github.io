@@ -203,27 +203,27 @@ $.getJSON("data/hike.geojson", function (data) {
 //     });
 //   }
 // });
-var bike = L.geoJson(null, {
-  style: function (feature) {
-    return {
-      color: #abcdef,
-      fill: false,
-      opacity: 1,
-      clickable: false
-    };
-  },
-  onEachFeature: function (feature, layer) {
-    bikeSearch.push({
-      name: layer.feature.properties.TYPE,
-      source: "Bike",
-      id: L.stamp(layer),
-      bounds: layer.getBounds()
-    });
-  }
-});
-$.getJSON("data/bike.geojson", function (data) {
-  bike.addData(data);
-});
+// var bike = L.geoJson(null, {
+//   style: function (feature) {
+//     return {
+//       color: #abcdef,
+//       fill: false,
+//       opacity: 1,
+//       clickable: false
+//     };
+//   },
+//   onEachFeature: function (feature, layer) {
+//     bikeSearch.push({
+//       name: layer.feature.properties.TYPE,
+//       source: "Bike",
+//       id: L.stamp(layer),
+//       bounds: layer.getBounds()
+//     });
+//   }
+// });
+// $.getJSON("data/bike.geojson", function (data) {
+//   bike.addData(data);
+// });
 
 
 /* Single marker cluster layer to hold all clusters */
