@@ -200,7 +200,7 @@ var trailHeads = L.geoJson(null, {
         }
       });
       $("#trailHeads-table tbody").append('<tr style="cursor: pointer;" onclick="sidebarClick('+L.stamp(layer)+'); return false;"><td class="trailHeads-name">'+layer.feature.properties.NAME+'<i class="fa fa-chevron-right pull-right"></td></tr>');
-      trailHeads.push({
+      trailHeadsSearch.push({
         name: layer.feature.properties.Trail_Head,
         source: "Trail Heads",
         id: L.stamp(layer),
