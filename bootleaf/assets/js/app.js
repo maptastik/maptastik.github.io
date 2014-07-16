@@ -404,7 +404,7 @@ $(document).one("ajaxStop", function () {
   map.fitBounds(hike.getBounds());
   $("#loading").hide();
 
-  var trailHeadssBH = new Bloodhound({
+  var trailHeadsBH = new Bloodhound({
     name: "Trail Heads",
     datumTokenizer: function (d) {
       return Bloodhound.tokenizers.whitespace(d.name);
