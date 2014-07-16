@@ -84,7 +84,7 @@ var boroughs = L.geoJson(null, {
     });
   }
 });
-$.getJSON("data/boroughs.geojson", function (data) {
+$.getJSON("data/hike.geojson", function (data) {
   boroughs.addData(data);
 });
 
