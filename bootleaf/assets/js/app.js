@@ -1,4 +1,4 @@
-var map, boroughSearch = [], theaterSearch = [], museumSearch = [];
+var map, hikeSearch = [], theaterSearch = [], museumSearch = [];
 
 $(document).ready(function() {
   getViewport();
@@ -66,7 +66,7 @@ var mapquestHYB = L.layerGroup([L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/sa
 /* Overlay Layers */
 var highlight = L.geoJson(null);
 
-var boroughs = L.geoJson(null, {
+var hike = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "black",
@@ -76,16 +76,16 @@ var boroughs = L.geoJson(null, {
     };
   },
   onEachFeature: function (feature, layer) {
-    boroughSearch.push({
-      name: layer.feature.properties.BoroName,
-      source: "Boroughs",
+    hikeSearch.push({
+      name: layer.feature.properties.TYPE,
+      source: "Hike",
       id: L.stamp(layer),
       bounds: layer.getBounds()
     });
   }
 });
 $.getJSON("data/hike.geojson", function (data) {
-  boroughs.addData(data);
+  hike.addData(data);
 });
 
 var subwayLines = L.geoJson(null, {
@@ -313,7 +313,7 @@ $.getJSON("data/DOITT_MUSEUM_01_13SEPT2010.geojson", function (data) {
 map = L.map("map", {
   zoom: 10,
   center: [40.702222, -73.979378],
-  layers: [mapquestOSM, boroughs, markerClusters, highlight],
+  layers: [mapquestOSM, hike, markerClusters, highlight],
   zoomControl: false,
   attributionControl: false
 });
@@ -428,7 +428,7 @@ var groupedOverlays = {
     "<img src='assets/img/museum.png' width='24' height='28'>&nbsp;Museums": museumLayer
   },
   "Reference": {
-    "Boroughs": boroughs,
+    "Hike": hike,
     "Subway Lines": subwayLines
   }
 };
@@ -444,17 +444,17 @@ $("#searchbox").click(function () {
 
 /* Typeahead search functionality */
 $(document).one("ajaxStop", function () {
-  /* Fit map to boroughs bounds */
-  map.fitBounds(boroughs.getBounds());
+  /* Fit map to hike bounds */
+  map.fitBounds(hike.getBounds());
   $("#loading").hide();
 
-  var boroughsBH = new Bloodhound({
-    name: "Boroughs",
+  var hikeBH = new Bloodhound({
+    name: "Hike",
     datumTokenizer: function (d) {
       return Bloodhound.tokenizers.whitespace(d.name);
     },
     queryTokenizer: Bloodhound.tokenizers.whitespace,
-    local: boroughSearch,
+    local: hikeSearch,
     limit: 10
   });
 
@@ -510,7 +510,7 @@ $(document).one("ajaxStop", function () {
     },
     limit: 10
   });
-  boroughsBH.initialize();
+  hikeBH.initialize();
   theatersBH.initialize();
   museumsBH.initialize();
   geonamesBH.initialize();
@@ -521,11 +521,11 @@ $(document).one("ajaxStop", function () {
     highlight: true,
     hint: false
   }, {
-    name: "Boroughs",
+    name: "Hike",
     displayKey: "name",
-    source: boroughsBH.ttAdapter(),
+    source: hikeBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'>Boroughs</h4>"
+      header: "<h4 class='typeahead-header'>Hike</h4>"
     }
   }, {
     name: "Theaters",
@@ -551,7 +551,7 @@ $(document).one("ajaxStop", function () {
       header: "<h4 class='typeahead-header'><img src='assets/img/globe.png' width='25' height='25'>&nbsp;GeoNames</h4>"
     }
   }).on("typeahead:selected", function (obj, datum) {
-    if (datum.source === "Boroughs") {
+    if (datum.source === "Hike") {
       map.fitBounds(datum.bounds);
     }
     if (datum.source === "Theaters") {
