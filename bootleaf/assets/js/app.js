@@ -127,7 +127,19 @@ $.getJSON("data/multi.geojson", function (data) {
 });
 
 // Add Blueway layer
-
+var blueway = L.geoJson(null, {
+  style: function (feature) {
+    return {
+      color: "#005CE6",
+      weight: 3,
+      opacity: 1,
+      clickable: false
+    };
+  },
+});
+$.getJSON("data/blueway.geojson", function (data) {
+  blueway.addData(data);
+});
 
 // Add Legacy Trail Layer
 
@@ -352,11 +364,12 @@ var groupedOverlays = {
     "<img src='assets/img/theater.png' width='24' height='28'>&nbsp;Theaters": theaterLayer,
     "<img src='assets/img/museum.png' width='24' height='28'>&nbsp;Museums": museumLayer
   },
-  "Reference": {
+  "Trails": {
     "Hike": hike,
     "Bike": bike,
     "Horseback": horse,
-    "Multi-Use": multi
+    "Multi-Use": multi,
+    "Blueway": blueway
   }
 };
 
