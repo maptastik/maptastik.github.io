@@ -71,7 +71,7 @@ var hike = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "#ff5500",
-      weight: 3,
+      weight: 6,
       opacity: 1,
       clickable: false
     };
@@ -86,7 +86,7 @@ var bike = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "#FFAA00",
-      weight: 3,
+      weight: 6,
       opacity: 1,
       clickable: false
     };
@@ -101,7 +101,7 @@ var horse = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "#55FA00",
-      weight: 3,
+      weight: 6,
       opacity: 1,
       clickable: false
     };
@@ -116,7 +116,7 @@ var multi = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "#FF00C5",
-      weight: 3,
+      weight: 6,
       opacity: 1,
       clickable: false
     };
@@ -131,7 +131,7 @@ var blueway = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "#005CE6",
-      weight: 3,
+      weight: 6,
       opacity: 1,
       clickable: false
     };
@@ -142,7 +142,19 @@ $.getJSON("data/blueway.geojson", function (data) {
 });
 
 // Add Legacy Trail Layer
-
+var legacy = L.geoJson(null, {
+  style: function (feature) {
+    return {
+      color: "#A900E6",
+      weight: 6,
+      opacity: 1,
+      clickable: false
+    };
+  },
+});
+$.getJSON("data/legacy.geojson", function (data) {
+  legacy.addData(data);
+});
 
 /* Single marker cluster layer to hold all clusters */
 var markerClusters = new L.MarkerClusterGroup({
@@ -250,7 +262,7 @@ $.getJSON("data/DOITT_MUSEUM_01_13SEPT2010.geojson", function (data) {
 map = L.map("map", {
   zoom: 11,
   center: [38.2926,-84.5769],
-  layers: [mapquestOSM, hike, bike, horse, multi, blueway, markerClusters, highlight],
+  layers: [mapquestOSM, hike, bike, horse, multi, blueway, legacy, markerClusters, highlight],
   zoomControl: false,
   attributionControl: false
 });
@@ -369,7 +381,8 @@ var groupedOverlays = {
     "Bike": bike,
     "Horseback": horse,
     "Multi-Use": multi,
-    "Blueway": blueway
+    "Blueway": blueway,
+    "Legacy Trail": legacy
   }
 };
 
