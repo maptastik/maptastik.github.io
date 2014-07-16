@@ -71,7 +71,7 @@ var hike = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "#ff5500",
-      weight: 6,
+      weight: 4,
       opacity: 1,
       clickable: false
     };
@@ -86,7 +86,7 @@ var bike = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "#FFAA00",
-      weight: 6,
+      weight: 4,
       opacity: 1,
       clickable: false
     };
@@ -101,7 +101,7 @@ var horse = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "#55FA00",
-      weight: 6,
+      weight: 4,
       opacity: 1,
       clickable: false
     };
@@ -116,7 +116,7 @@ var multi = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "#FF00C5",
-      weight: 6,
+      weight: 4,
       opacity: 1,
       clickable: false
     };
@@ -131,7 +131,7 @@ var blueway = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "#005CE6",
-      weight: 6,
+      weight: 4,
       opacity: 1,
       clickable: false
     };
@@ -146,7 +146,7 @@ var legacy = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "#A900E6",
-      weight: 6,
+      weight: 4,
       opacity: 1,
       clickable: false
     };
