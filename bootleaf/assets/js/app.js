@@ -66,11 +66,12 @@ var mapquestHYB = L.layerGroup([L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/sa
 /* Overlay Layers */
 var highlight = L.geoJson(null);
 
+// Add Hike layer
 var hike = L.geoJson(null, {
   style: function (feature) {
     return {
-      color: "black",
-      fill: false,
+      color: "#ff5500",
+      weight: 3,
       opacity: 1,
       clickable: false
     };
@@ -80,40 +81,20 @@ $.getJSON("data/hike.geojson", function (data) {
   hike.addData(data);
 });
 
+// Add Bike layer
 var bike = L.geoJson(null, {
   style: function (feature) {
-      return {
-        color: "#abcdef",
-        weight: 3,
-        opacity: 1,
-        clickable: false
-      };
+    return {
+      color: "#FFAA00",
+      weight: 3,
+      opacity: 1,
+      clickable: false
+    };
   },
 });
 $.getJSON("data/bike.geojson", function (data) {
   bike.addData(data);
 });
-// var bike = L.geoJson(null, {
-//   style: function (feature) {
-//     return {
-//       color: #abcdef,
-//       fill: false,
-//       opacity: 1,
-//       clickable: false
-//     };
-//   },
-//   onEachFeature: function (feature, layer) {
-//     bikeSearch.push({
-//       name: layer.feature.properties.TYPE,
-//       source: "Bike",
-//       id: L.stamp(layer),
-//       bounds: layer.getBounds()
-//     });
-//   }
-// });
-// $.getJSON("data/bike.geojson", function (data) {
-//   bike.addData(data);
-// });
 
 
 /* Single marker cluster layer to hold all clusters */
