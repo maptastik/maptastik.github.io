@@ -112,7 +112,19 @@ $.getJSON("data/horse.geojson", function (data) {
 });
 
 // Add Multi layer
-
+var multi = L.geoJson(null, {
+  style: function (feature) {
+    return {
+      color: "#FF00C5",
+      weight: 3,
+      opacity: 1,
+      clickable: false
+    };
+  },
+});
+$.getJSON("data/multi.geojson", function (data) {
+  multi.addData(data);
+});
 
 // Add Blueway layer
 
@@ -226,7 +238,7 @@ $.getJSON("data/DOITT_MUSEUM_01_13SEPT2010.geojson", function (data) {
 map = L.map("map", {
   zoom: 11,
   center: [38.2926,-84.5769],
-  layers: [mapquestOSM, hike, bike, horse, markerClusters, highlight],
+  layers: [mapquestOSM, hike, bike, horse, multi, markerClusters, highlight],
   zoomControl: false,
   attributionControl: false
 });
@@ -343,7 +355,8 @@ var groupedOverlays = {
   "Reference": {
     "Hike": hike,
     "Bike": bike,
-    "Horseback": horse
+    "Horseback": horse,
+    "Multi-Use": multi
   }
 };
 
