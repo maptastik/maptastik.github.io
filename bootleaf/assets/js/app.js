@@ -1,4 +1,4 @@
-var map, trailHeadSearch = [], museumSearch = [];
+var map, trailHeadsSearch = [], museumSearch = [];
 
 $(document).ready(function() {
   getViewport();
@@ -410,7 +410,7 @@ $(document).one("ajaxStop", function () {
       return Bloodhound.tokenizers.whitespace(d.name);
     },
     queryTokenizer: Bloodhound.tokenizers.whitespace,
-    local: trailHeadSearch,
+    local: trailHeadsSearch,
     limit: 10
   });
   var trailHeadsList = new List("trailHeads", {valueNames: ["Trail_Head"]}).sort("Trail_Head", {order:"asc"});
