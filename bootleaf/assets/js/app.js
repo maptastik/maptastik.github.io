@@ -1,4 +1,4 @@
-var map, hikeSearch = [], theaterSearch = [], museumSearch = [];
+var map, theaterSearch = [], museumSearch = [];
 
 $(document).ready(function() {
   getViewport();
@@ -75,14 +75,6 @@ var hike = L.geoJson(null, {
       clickable: false
     };
   },
-  onEachFeature: function (feature, layer) {
-    hikeSearch.push({
-      name: layer.feature.properties.TYPE,
-      source: "Hike",
-      id: L.stamp(layer),
-      bounds: layer.getBounds()
-    });
-  }
 });
 $.getJSON("data/hike.geojson", function (data) {
   hike.addData(data);
@@ -93,9 +85,13 @@ var bike = L.geoJson(null, {
       return {
         color: "#abcdef",
         weight: 3,
-        opacity: 1
+        opacity: 1,
+        clickable: false
       };
   },
+});
+$.getJSON("data/bike.geojson", function (data) {
+  bike.addData(data);
 });
 // var bike = L.geoJson(null, {
 //   style: function (feature) {
@@ -224,9 +220,9 @@ $.getJSON("data/DOITT_MUSEUM_01_13SEPT2010.geojson", function (data) {
 });
 
 map = L.map("map", {
-  zoom: 10,
-  center: [40.702222, -73.979378],
-  layers: [mapquestOSM, hike, markerClusters, highlight],
+  zoom: 11,
+  center: [38.2926,-84.5769],
+  layers: [mapquestOSM, hike, bike, markerClusters, highlight],
   zoomControl: false,
   attributionControl: false
 });
@@ -361,16 +357,6 @@ $(document).one("ajaxStop", function () {
   map.fitBounds(hike.getBounds());
   $("#loading").hide();
 
-  var hikeBH = new Bloodhound({
-    name: "Hike",
-    datumTokenizer: function (d) {
-      return Bloodhound.tokenizers.whitespace(d.name);
-    },
-    queryTokenizer: Bloodhound.tokenizers.whitespace,
-    local: hikeSearch,
-    limit: 10
-  });
-
   var theatersBH = new Bloodhound({
     name: "Theaters",
     datumTokenizer: function (d) {
@@ -423,7 +409,6 @@ $(document).one("ajaxStop", function () {
     },
     limit: 10
   });
-  hikeBH.initialize();
   theatersBH.initialize();
   museumsBH.initialize();
   geonamesBH.initialize();
@@ -433,13 +418,6 @@ $(document).one("ajaxStop", function () {
     minLength: 3,
     highlight: true,
     hint: false
-  }, {
-    name: "Hike",
-    displayKey: "name",
-    source: hikeBH.ttAdapter(),
-    templates: {
-      header: "<h4 class='typeahead-header'>Hike</h4>"
-    }
   }, {
     name: "Theaters",
     displayKey: "name",
@@ -464,9 +442,6 @@ $(document).one("ajaxStop", function () {
       header: "<h4 class='typeahead-header'><img src='assets/img/globe.png' width='25' height='25'>&nbsp;GeoNames</h4>"
     }
   }).on("typeahead:selected", function (obj, datum) {
-    if (datum.source === "Hike") {
-      map.fitBounds(datum.bounds);
-    }
     if (datum.source === "Theaters") {
       if (!map.hasLayer(theaterLayer)) {
         map.addLayer(theaterLayer);
