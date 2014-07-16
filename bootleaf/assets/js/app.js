@@ -96,6 +96,29 @@ $.getJSON("data/bike.geojson", function (data) {
   bike.addData(data);
 });
 
+// Add Horse layer
+var horse = L.geoJson(null, {
+  style: function (feature) {
+    return {
+      color: "#55FA00",
+      weight: 3,
+      opacity: 1,
+      clickable: false
+    };
+  },
+});
+$.getJSON("data/horse.geojson", function (data) {
+  horse.addData(data);
+});
+
+// Add Multi layer
+
+
+// Add Blueway layer
+
+
+// Add Legacy Trail Layer
+
 
 /* Single marker cluster layer to hold all clusters */
 var markerClusters = new L.MarkerClusterGroup({
@@ -203,7 +226,7 @@ $.getJSON("data/DOITT_MUSEUM_01_13SEPT2010.geojson", function (data) {
 map = L.map("map", {
   zoom: 11,
   center: [38.2926,-84.5769],
-  layers: [mapquestOSM, hike, bike, markerClusters, highlight],
+  layers: [mapquestOSM, hike, bike, horse, markerClusters, highlight],
   zoomControl: false,
   attributionControl: false
 });
@@ -319,7 +342,8 @@ var groupedOverlays = {
   },
   "Reference": {
     "Hike": hike,
-    "Bike": bike
+    "Bike": bike,
+    "Horseback": horse
   }
 };
 
