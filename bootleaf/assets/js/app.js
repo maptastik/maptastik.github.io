@@ -50,7 +50,7 @@ var mapquestOSM = L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.
   subdomains: ["otile1", "otile2", "otile3", "otile4"],
   attribution: 'Tiles courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">. Map data (c) <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, CC-BY-SA.'
 });
-var stamenTER = L.tileLayer("http://{s}.stamen.com/terrain/{z}/{x}/{y}.jpg", {
+var stamenTER = L.tileLayer("http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg", {
   minZoom: 10,
   maxZoom: 16,
   // subdomains: ["oatile1", "oatile2", "oatile3", "oatile4"],
