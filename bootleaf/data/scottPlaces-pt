@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "KENTUCKY HORSE PARK"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.52614784240723,
+          38.1491712926222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "PROPOSED RESERVOIR"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.63515281677245,
+          38.33293783146887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "VETERAN'S WMA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.54614639282227,
+          38.31566632025343
+        ]
+      }
+    }
+  ]
+}

@@ -401,7 +401,7 @@ $("#searchbox").click(function () {
 /* Typeahead search functionality */
 $(document).one("ajaxStop", function () {
   /* Fit map to hike bounds */
-  map.fitBounds(hike.getBounds());
+  // map.fitBounds(hike.getBounds());
   $("#loading").hide();
 
   var trailHeadsBH = new Bloodhound({

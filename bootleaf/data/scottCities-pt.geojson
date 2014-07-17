@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "GEORGETOWN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.55980956554413,
+          38.20993817997891
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "STAMPING GROUND"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.68644738197327,
+          38.271610396045766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "SADIEVILLE"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.53724145889282,
+          38.389714564466594
+        ]
+      }
+    }
+  ]
+}
