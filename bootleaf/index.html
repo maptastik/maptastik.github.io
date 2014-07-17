@@ -91,24 +91,24 @@
           <div class="panel-body">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" id="poi-tabs">
-              <li class="active"><a href="#theaters" onclick="$('#poi-tabs a[href=\'#theaters\']').tab('show'); return false;"><img src="assets/img/theater.png" height="16px" width="14px">&nbsp;Theaters</a></li>
+              <li class="active"><a href="#trailHeads" onclick="$('#poi-tabs a[href=\'#trailHeads\']').tab('show'); return false;"><img src="assets/img/theater.png" height="16px" width="14px">&nbsp;Trail Heads</a></li>
               <li><a href="#museums" onclick="$('#poi-tabs a[href=\'#museums\']').tab('show'); return false;"><img src="assets/img/museum.png" height="16px" width="14px">&nbsp;Museums</a></li>
             </ul>
             <!-- Tab panes -->
             <div class="tab-content">
-              <div class="tab-pane active" id="theaters">
+              <div class="tab-pane active" id="trailHeads">
                 <p>
                   <div class="row">
                     <div class="col-xs-8 col-md-8">
                       <input type="text" class="form-control search" placeholder="Search" />
                     </div>
                     <div class="col-xs-4 col-md-4">
-                      <button type="button" class="btn btn-primary pull-right sort" data-sort="theater-name"><i class="fa fa-sort"></i>&nbsp;&nbsp;Sort</button>
+                      <button type="button" class="btn btn-primary pull-right sort" data-sort="trailHead-name"><i class="fa fa-sort"></i>&nbsp;&nbsp;Sort</button>
                     </div>
                   </div>
                 </p>
                 <div class="sidebar-table">
-                  <table class="table table-hover" id="theater-table">
+                  <table class="table table-hover" id="trailHeads-table">
                     <thead class="hidden">
                       <tr>
                         <th>Name</th>
@@ -175,7 +175,7 @@
                 <ul class="dropdown-menu">
                   <li><a href="#boroughs-tab" data-toggle="tab">Boroughs</a></li>
                   <li><a href="#subway-lines-tab" data-toggle="tab">Subway Lines</a></li>
-                  <li><a href="#theaters-tab" data-toggle="tab">Theaters</a></li>
+                  <li><a href="#trailHeads-tab" data-toggle="tab">Trail Heads</a></li>
                   <li><a href="#museums-tab" data-toggle="tab">Museums</a></li>
                 </ul>
               </li>
@@ -236,8 +236,8 @@
               <div class="tab-pane fade" id="subway-lines-tab">
                 <p><a href="http://spatialityblog.com/2010/07/08/mta-gis-data-update/#datalinks" target="_blank">MTA Subway data</a> courtesy of the <a href="http://www.urbanresearch.org/about/cur-components/cuny-mapping-service" target="_blank">CUNY Mapping Service at the Center for Urban Research</a></p>
               </div>
-              <div class="tab-pane fade" id="theaters-tab">
-                <p>Theater data courtesy of <a href="https://data.cityofnewyork.us/Recreation/Theaters/kdu2-865w" target="_blank">NYC Department of Information & Telecommunications (DoITT)</a></p>
+              <div class="tab-pane fade" id="trailHeads-tab">
+                <p>Trail Head data courtesy of <a href="https://data.cityofnewyork.us/Recreation/Theaters/kdu2-865w" target="_blank">NYC Department of Information & Telecommunications (DoITT)</a></p>
               </div>
               <div class="tab-pane fade" id="museums-tab">
                 <p>Museum data courtesy of <a href="https://data.cityofnewyork.us/Recreation/Museums-and-Galleries/sat5-adpb" target="_blank">NYC Department of Information & Telecommunications (DoITT)</a></p>
