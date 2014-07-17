@@ -376,7 +376,7 @@ var baseLayers = {
 
 var groupedOverlays = {
   "Points of Interest": {
-    "<img src='assets/img/theater.png' width='24' height='28'>&nbsp;Trail Heads": trailHeadsLayer,
+    "<img src='assets/img/trailHead-icon-12.svg' width='24' height='28'>&nbsp;Trail Heads": trailHeadsLayer,
     "<img src='assets/img/museum.png' width='24' height='28'>&nbsp;Museums": museumLayer
   },
   "Trails": {
