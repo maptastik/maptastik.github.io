@@ -174,7 +174,7 @@ var trailHeads = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/theater.png",
+        iconUrl: "assets/img/trailHead-icon-12.svg",
         iconSize: [24, 28],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -470,7 +470,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: trailHeadsBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/theater.png' width='24' height='28'>&nbsp;Trail Heads</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/trailHead-icon-12.svg' width='24' height='28'>&nbsp;Trail Heads</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
