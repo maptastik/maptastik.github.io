@@ -1,4 +1,4 @@
-var map, trailHeadsSearch = [], museumSearch = [];
+var map, trailHeadsSearch = [], citiesSearch = [];
 
 $(document).ready(function() {
   getViewport();
@@ -35,7 +35,7 @@ function sidebarClick(id) {
     sidebar.hide();
     getViewport();
   }
-  map.addLayer(trailHeadsLayer).addLayer(museumLayer);
+  map.addLayer(trailHeadsLayer).addLayer(citiesLayer);
   var layer = markerClusters.getLayer(id);
   markerClusters.zoomToShowLayer(layer, function() {
     map.setView([layer.getLatLng().lat, layer.getLatLng().lng], 18);
@@ -215,9 +215,9 @@ $.getJSON("data/trailHeads.geojson", function (data) {
   map.addLayer(trailHeadsLayer);
 });
 
-/* Empty layer placeholder to add to layer control for listening when to add/remove museums to markerClusters layer */
-var museumLayer = L.geoJson(null);
-var museums = L.geoJson(null, {
+/* Empty layer placeholder to add to layer control for listening when to add/remove cities to markerClusters layer */
+var citiesLayer = L.geoJson(null);
+var cities = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
@@ -246,11 +246,11 @@ var museums = L.geoJson(null, {
           }));
         }
       });
-      $("#museum-table tbody").append('<tr style="cursor: pointer;" onclick="sidebarClick('+L.stamp(layer)+'); return false;"><td class="museum-name">'+layer.feature.properties.NAME+'<i class="fa fa-chevron-right pull-right"></td></tr>');
-      museumSearch.push({
+      $("#cities-table tbody").append('<tr style="cursor: pointer;" onclick="sidebarClick('+L.stamp(layer)+'); return false;"><td class="cities-name">'+layer.feature.properties.NAME+'<i class="fa fa-chevron-right pull-right"></td></tr>');
+      citiesSearch.push({
         name: layer.feature.properties.NAME,
         address: layer.feature.properties.ADRESS1,
-        source: "Museums",
+        source: "Cities",
         id: L.stamp(layer),
         lat: layer.feature.geometry.coordinates[1],
         lng: layer.feature.geometry.coordinates[0]
@@ -258,8 +258,8 @@ var museums = L.geoJson(null, {
     }
   }
 });
-$.getJSON("data/DOITT_MUSEUM_01_13SEPT2010.geojson", function (data) {
-  museums.addData(data);
+$.getJSON("data/scottCities-pt.geojson", function (data) {
+  cities.addData(data);
 });
 
 map = L.map("map", {
@@ -275,8 +275,8 @@ map.on("overlayadd", function(e) {
   if (e.layer === trailHeadsLayer) {
     markerClusters.addLayer(trailHeads);
   }
-  if (e.layer === museumLayer) {
-    markerClusters.addLayer(museums);
+  if (e.layer === citiesLayer) {
+    markerClusters.addLayer(cities);
   }
 });
 
@@ -284,8 +284,8 @@ map.on("overlayremove", function(e) {
   if (e.layer === trailHeadsLayer) {
     markerClusters.removeLayer(trailHeads);
   }
-  if (e.layer === museumLayer) {
-    markerClusters.removeLayer(museums);
+  if (e.layer === citiesLayer) {
+    markerClusters.removeLayer(cities);
   }
 });
 
@@ -377,7 +377,7 @@ var baseLayers = {
 var groupedOverlays = {
   "Points of Interest": {
     "<img src='assets/img/trailHead-icon-12.svg' width='24' height='28'>&nbsp;Trail Heads": trailHeadsLayer,
-    "<img src='assets/img/museum.png' width='24' height='28'>&nbsp;Museums": museumLayer
+    "<img src='assets/img/museum.png' width='24' height='28'>&nbsp;Cities": citiesLayer
   },
   "Trails": {
     "Hike": hike,
@@ -415,16 +415,16 @@ $(document).one("ajaxStop", function () {
   });
   var trailHeadsList = new List("trailHeads", {valueNames: ["trailHeads-name"]}).sort("trailHeads-name", {order:"asc"});
 
-  var museumsBH = new Bloodhound({
-    name: "Museums",
+  var citiesBH = new Bloodhound({
+    name: "Cities",
     datumTokenizer: function (d) {
       return Bloodhound.tokenizers.whitespace(d.name);
     },
     queryTokenizer: Bloodhound.tokenizers.whitespace,
-    local: museumSearch,
+    local: citiesSearch,
     limit: 10
   });
-  var museumList = new List("museums", {valueNames: ["museum-name", "museum-address"]}).sort("museum-name", {order:"asc"});
+  var citiesList = new List("cities", {valueNames: ["cities-name"]}).sort("cities-name", {order:"asc"});
 
   var geonamesBH = new Bloodhound({
     name: "GeoNames",
@@ -457,7 +457,7 @@ $(document).one("ajaxStop", function () {
     limit: 10
   });
   trailHeadsBH.initialize();
-  museumsBH.initialize();
+  citiesBH.initialize();
   geonamesBH.initialize();
 
   /* instantiate the typeahead UI */
@@ -474,11 +474,11 @@ $(document).one("ajaxStop", function () {
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
-    name: "Museums",
+    name: "Cities",
     displayKey: "name",
-    source: museumsBH.ttAdapter(),
+    source: citiesBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/museum.png' width='24' height='28'>&nbsp;Museums</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/museum.png' width='24' height='28'>&nbsp;Cities</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
@@ -498,9 +498,9 @@ $(document).one("ajaxStop", function () {
         map._layers[datum.id].fire("click");
       }
     }
-    if (datum.source === "Museums") {
-      if (!map.hasLayer(museumLayer)) {
-        map.addLayer(museumLayer);
+    if (datum.source === "Cities") {
+      if (!map.hasLayer(citiesLayer)) {
+        map.addLayer(citiesLayer);
       }
       map.setView([datum.lat, datum.lng], 17);
       if (map._layers[datum.id]) {
