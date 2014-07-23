@@ -74,9 +74,9 @@ var scottCo = L.geoJson(null, {
       weight: 4,
       opacity: 1,
       clickable: false
-    }
-  }
-})
+    };
+  },
+});
 
 /* Overlay Layers */
 var highlight = L.geoJson(null);
