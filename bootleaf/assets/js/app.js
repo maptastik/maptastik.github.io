@@ -260,6 +260,7 @@ var cities = L.geoJson(null, {
 });
 $.getJSON("data/scottCities-pt.geojson", function (data) {
   cities.addData(data);
+  map.addLayer(citiesLayer);
 });
 
 map = L.map("map", {
