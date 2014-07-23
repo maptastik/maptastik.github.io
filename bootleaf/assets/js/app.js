@@ -221,8 +221,8 @@ var cities = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/museum.png",
-        iconSize: [24, 28],
+        iconUrl: "assets/img/circle-12.svg",
+        iconSize: [18, 18],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
       }),
@@ -377,7 +377,7 @@ var baseLayers = {
 var groupedOverlays = {
   "Points of Interest": {
     "<img src='assets/img/trailHead-icon-12.svg' width='24' height='28'>&nbsp;Trail Heads": trailHeadsLayer,
-    "<img src='assets/img/museum.png' width='24' height='28'>&nbsp;Cities": citiesLayer
+    "<img src='assets/img/circle-12.svg' width='18' height='18'>&nbsp;Cities": citiesLayer
   },
   "Trails": {
     "Hike": hike,
@@ -478,7 +478,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: citiesBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/museum.png' width='24' height='28'>&nbsp;Cities</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/circle-12.svg' width='18' height='18'>&nbsp;Cities</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
