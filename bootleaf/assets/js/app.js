@@ -419,7 +419,7 @@ $(document).one("ajaxStop", function () {
   var trailHeadsBH = new Bloodhound({
     name: "Trail Heads",
     datumTokenizer: function (d) {
-      return Bloodhound.tokenizers.whitespace(d.name);
+      return Bloodhound.tokenizers.whitespace(d.Trail_Head);
     },
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     local: trailHeadsSearch,
