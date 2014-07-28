@@ -67,16 +67,16 @@ var mapquestHYB = L.layerGroup([L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/sa
   attribution: 'Labels courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">. Map data (c) <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, CC-BY-SA. Portions Courtesy NASA/JPL-Caltech and U.S. Depart. of Agriculture, Farm Service Agency'
 })]);
 
-// var scottCo = L.geoJson(null, {
-//   style: function(feature) {
-//     return {
-//       color: "#ff5500",
-//       weight: 4,
-//       opacity: 1,
-//       clickable: false
-//     };
-//   },
-// });
+var scottCo = L.geoJson(null, {
+  style: function(feature) {
+    return {
+      color: "#ff5500",
+      weight: 4,
+      opacity: 1,
+      clickable: false
+    };
+  },
+});
 
 /* Overlay Layers */
 var highlight = L.geoJson(null);
@@ -277,7 +277,7 @@ $.getJSON("data/scottCities-pt.geojson", function (data) {
 map = L.map("map", {
   zoom: 11,
   center: [38.2926,-84.5769],
-  layers: [osmSTD, hike, bike, horse, multi, blueway, legacy, markerClusters, highlight],
+  layers: [osmSTD, scottCo, hike, bike, horse, multi, blueway, legacy, markerClusters, highlight],
   zoomControl: false,
   attributionControl: false
 });
