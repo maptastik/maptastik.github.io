@@ -44,10 +44,10 @@ function sidebarClick(id) {
 }
 
 /* Basemap Layers */
-var osmSTD = L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+var mbSTD = L.tileLayer("https://{s}.tiles.mapbox.com/v4/maptastik.j354k5k8/{z}/{x}/{y}.png", {
   minZoom: 10,
   maxZoom: 16,
-  subdomains: ["a", "b", "c"],
+  // subdomains: ["a", "b", "c"],
   attribution: 'Map tiles and data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
 });
 var stamenTER = L.tileLayer("http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg", {
@@ -281,7 +281,7 @@ $.getJSON("data/scottCities-pt.geojson", function (data) {
 map = L.map("map", {
   zoom: 11,
   center: [38.2926,-84.5769],
-  layers: [osmSTD, scottCo, hike, bike, horse, multi, blueway, legacy, markerClusters, highlight],
+  layers: [mbSTD, scottCo, hike, bike, horse, multi, blueway, legacy, markerClusters, highlight],
   zoomControl: false,
   attributionControl: false
 });
@@ -385,7 +385,7 @@ if (document.body.clientWidth <= 767) {
 }
 
 var baseLayers = {
-  "Street Map": osmSTD,
+  "Street Map": mbSTD,
   "Terrain": stamenTER,
   "Imagery with Streets": mapquestHYB
 };
