@@ -209,8 +209,8 @@ var trailHeads = L.geoJson(null, {
           $("#featureModal").modal("show");
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
             stroke: false,
-            fillColor: "#00FFFF",
-            fillOpacity: 0.7,
+            // fillColor: "#00FFFF",
+            // fillOpacity: 0.7,
             radius: 10
           }));
         }
