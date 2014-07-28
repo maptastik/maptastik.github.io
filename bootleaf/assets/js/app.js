@@ -70,13 +70,17 @@ var mapquestHYB = L.layerGroup([L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/sa
 var scottCo = L.geoJson(null, {
   style: function(feature) {
     return {
-      color: "#ff5500",
+      color: "#000",
       weight: 4,
       opacity: 1,
       clickable: false
     };
   },
 });
+$.getJSON("data/scottCo.geojson", function (data) {
+  scottCo.addData(data);
+});
+
 
 /* Overlay Layers */
 var highlight = L.geoJson(null);
