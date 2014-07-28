@@ -45,7 +45,7 @@ function sidebarClick(id) {
 
 /* Basemap Layers */
 // https://a.tiles.mapbox.com/v4/maptastik.j354k5k8/page.html?access_token=pk.eyJ1IjoibWFwdGFzdGlrIiwiYSI6IjNPMkREV1kifQ.2KGPFZD0QaGfvYzXYotTXQ#15/38.2082/-84.5610
-var mbSTD = L.tileLayer("https://a.tiles.mapbox.com/v4/maptastik.j354k5k8/page.html?access_token=pk.eyJ1IjoibWFwdGFzdGlrIiwiYSI6IjNPMkREV1kifQ.2KGPFZD0QaGfvYzXYotTXQ#{z}/{x}/{y}.png", {
+var mbSTD = L.tileLayer("https://c.tiles.mapbox.com/v3/maptastik.j354k5k8/{z}/{x}/{y}.png", {
   minZoom: 10,
   maxZoom: 16,
   // subdomains: ["a", "b", "c"],
