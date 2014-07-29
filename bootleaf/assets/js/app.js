@@ -71,8 +71,8 @@ var mapquestHYB = L.layerGroup([L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/sa
 var scottCo = L.geoJson(null, {
   style: function(feature) {
     return {
-      color: "#000",
-      weight: 4,
+      color: "#454545",
+      weight: 2,
       opacity: 1,
       clickable: false
     };
