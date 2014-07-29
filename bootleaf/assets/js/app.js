@@ -220,7 +220,7 @@ var trailHeads = L.geoJson(null, {
       $("#trailHeads-table tbody").append('<tr style="cursor: pointer;" onclick="sidebarClick('+L.stamp(layer)+'); return false;"><td class="trailHeads-name">'+layer.feature.properties.Trail_Head+'<i class="fa fa-chevron-right pull-right"></td></tr>');
       trailHeadsSearch.push({
         name: layer.feature.properties.Trail_Head,
-        source: "Trail Heads",
+        source: "Heads",
         id: L.stamp(layer),
         lat: layer.feature.geometry.coordinates[1],
         lng: layer.feature.geometry.coordinates[0]
@@ -395,7 +395,7 @@ var baseLayers = {
 
 var groupedOverlays = {
   "Points of Interest": {
-    "<img src='assets/img/trailHead-icon-12.svg' width='24' height='28'>&nbsp;Trail Heads": trailHeadsLayer,
+    "<img src='assets/img/trailHead-icon-12.svg' width='24' height='28'>&nbsp;Heads": trailHeadsLayer,
     "<img src='assets/img/circle-12.svg' width='18' height='18'>&nbsp;Cities": citiesLayer
   },
   "Trails": {
@@ -424,7 +424,7 @@ $(document).one("ajaxStop", function () {
   $("#loading").hide();
 
   var trailHeadsBH = new Bloodhound({
-    name: "Trail Heads",
+    name: "Heads",
     datumTokenizer: function (d) {
       return Bloodhound.tokenizers.whitespace(d.name);
     },
@@ -432,7 +432,7 @@ $(document).one("ajaxStop", function () {
     local: trailHeadsSearch,
     limit: 10
   });
-  var trailHeadsList = new List("trailHeads", {valueNames: ["trailHeads-name"]}).sort("trailHeads-name");
+  var trailHeadsList = new List("trailHeads", {valueNames: ["trailHeads-name"]}).sort("trailHeads-name", {order:"asc"});
 
   var citiesBH = new Bloodhound({
     name: "Cities",
@@ -454,11 +454,11 @@ $(document).one("ajaxStop", function () {
     highlight: true,
     hint: false
   }, {
-    name: "Trail Heads",
+    name: "Heads",
     displayKey: "name",
     source: trailHeadsBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/trailHead-icon-12.svg' width='24' height='28'>&nbsp;Trail Heads</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/trailHead-icon-12.svg' width='24' height='28'>&nbsp;Heads</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
@@ -470,7 +470,7 @@ $(document).one("ajaxStop", function () {
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }).on("typeahead:selected", function (obj, datum) {
-    if (datum.source === "Trail Heads") {
+    if (datum.source === "Heads") {
       if (!map.hasLayer(trailHeadsLayer)) {
         map.addLayer(trailHeadsLayer);
       }
