@@ -432,7 +432,7 @@ $(document).one("ajaxStop", function () {
     local: trailHeadsSearch,
     limit: 10
   });
-  var trailHeadsList = new List("trailHeads", {valueNames: ["trailHeads-name"]}).sort("trailHeads-name", false);
+  // var trailHeadsList = new List("trailHeads", {valueNames: ["trailHeads-name"]}).sort("trailHeads-name", false);
 
   var citiesBH = new Bloodhound({
     name: "Cities",
