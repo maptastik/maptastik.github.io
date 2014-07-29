@@ -74,6 +74,8 @@ var scottCo = L.geoJson(null, {
       color: "#454545",
       weight: 2,
       opacity: 1,
+      fillColor: "#fff",
+      fillOpacity: 0,
       clickable: false
     };
   },
