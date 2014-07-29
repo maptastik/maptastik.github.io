@@ -39,19 +39,6 @@
           38.389714564466594
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "BLERGVILLE"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -84.63724145889282,
-          38.489714564466594
-        ]
-      }
     }
   ]
 }
