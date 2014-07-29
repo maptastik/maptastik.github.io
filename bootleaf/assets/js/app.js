@@ -240,9 +240,9 @@ var cities = L.geoJson(null, {
     return L.marker(latlng, {
       icon: L.icon({
         iconUrl: "assets/img/circle-12.svg",
-        iconSize: [18, 18],
-        iconAnchor: [9, 9],
-        popupAnchor: [0, 0]
+        iconSize: [0.1, 0.1],
+        // iconAnchor: [0.1, 0.1],
+        // popupAnchor: [0, 0]
       }),
       title: feature.properties.NAME,
       riseOnHover: true
@@ -256,12 +256,12 @@ var cities = L.geoJson(null, {
           $("#feature-title").html(feature.properties.NAME);
           $("#feature-info").html(content);
           // $("#featureModal").modal("show");
-          highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
-            stroke: false,
-            fillColor: "#00FFFF",
-            fillOpacity: 0.7,
-            radius: 10
-          }));
+          // highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
+          //   stroke: false,
+          //   fillColor: "#00FFFF",
+          //   fillOpacity: 0.7,
+          //   radius: 10
+          // }));
         }
       });
       $("#cities-table tbody").append('<tr style="cursor: pointer;" onclick="sidebarClick('+L.stamp(layer)+'); return false;"><td class="cities-name">'+layer.feature.properties.NAME+'<i class="fa fa-chevron-right pull-right"></td></tr>');
@@ -294,18 +294,18 @@ map.on("overlayadd", function(e) {
   if (e.layer === trailHeadsLayer) {
     markerClusters.addLayer(trailHeads);
   }
-  if (e.layer === citiesLayer) {
-    markerClusters.addLayer(cities);
-  }
+  // if (e.layer === citiesLayer) {
+  //   markerClusters.addLayer(cities);
+  // }
 });
 
 map.on("overlayremove", function(e) {
   if (e.layer === trailHeadsLayer) {
     markerClusters.removeLayer(trailHeads);
   }
-  if (e.layer === citiesLayer) {
-    markerClusters.removeLayer(cities);
-  }
+  // if (e.layer === citiesLayer) {
+  //   markerClusters.removeLayer(cities);
+  // }
 });
 
 /* Clear feature highlight when featureModal is closed */
@@ -396,7 +396,7 @@ var baseLayers = {
 var groupedOverlays = {
   "Points of Interest": {
     "<img src='assets/img/trailHead-icon-12.svg' width='24' height='28'>&nbsp;Trail Heads": trailHeadsLayer,
-    "<img src='assets/img/circle-12.svg' width='18' height='18'>&nbsp;Cities": citiesLayer
+    // "<img src='assets/img/circle-12.svg' width='18' height='18'>&nbsp;Cities": citiesLayer
   },
   "Trails": {
     "Hike": hike,
