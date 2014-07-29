@@ -395,7 +395,7 @@ var baseLayers = {
 
 var groupedOverlays = {
   "Points of Interest": {
-    "<img src='assets/img/trailHead-icon-12.svg' width='24' height='28'>&nbsp;Heads": trailHeadsLayer,
+    "<img src='assets/img/trailHead-icon-12.svg' width='24' height='28'>&nbsp;Trail Heads": trailHeadsLayer,
     "<img src='assets/img/circle-12.svg' width='18' height='18'>&nbsp;Cities": citiesLayer
   },
   "Trails": {
