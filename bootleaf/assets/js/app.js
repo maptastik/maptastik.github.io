@@ -255,13 +255,13 @@ var cities = L.geoJson(null, {
         click: function (e) {
           $("#feature-title").html(feature.properties.NAME);
           $("#feature-info").html(content);
-          // $("#featureModal").modal("show");
-          // highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
-          //   stroke: false,
-          //   fillColor: "#00FFFF",
-          //   fillOpacity: 0.7,
-          //   radius: 10
-          // }));
+          $("#featureModal").modal("show");
+          highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
+            stroke: false,
+            fillColor: "#00FFFF",
+            fillOpacity: 0.7,
+            radius: 10
+          }));
         }
       });
       $("#cities-table tbody").append('<tr style="cursor: pointer;" onclick="sidebarClick('+L.stamp(layer)+'); return false;"><td class="cities-name">'+layer.feature.properties.NAME+'<i class="fa fa-chevron-right pull-right"></td></tr>');
