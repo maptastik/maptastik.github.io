@@ -241,8 +241,8 @@ var cities = L.geoJson(null, {
       icon: L.icon({
         iconUrl: "assets/img/circle-12.svg",
         iconSize: [0.1, 0.1],
-        // iconAnchor: [0.1, 0.1],
-        // popupAnchor: [0, 0]
+        iconAnchor: [0.1, 0.1],
+        popupAnchor: [0, 0]
       }),
       title: feature.properties.NAME,
       riseOnHover: true
