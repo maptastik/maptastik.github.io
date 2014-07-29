@@ -240,8 +240,13 @@ var cities = L.geoJson(null, {
     return L.marker(latlng, {
       icon: L.icon({
         iconUrl: "assets/img/circle-12.svg",
+<<<<<<< HEAD
         iconSize: [0.1, 0.1],
         iconAnchor: [0.1, 0.1],
+=======
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+>>>>>>> parent of 9039634... clean up the cities navigation
         popupAnchor: [0, 0]
       }),
       title: feature.properties.NAME,
@@ -255,7 +260,11 @@ var cities = L.geoJson(null, {
         click: function (e) {
           $("#feature-title").html(feature.properties.NAME);
           $("#feature-info").html(content);
+<<<<<<< HEAD
           $("#featureModal").modal("show");
+=======
+          // $("#featureModal").modal("show");
+>>>>>>> parent of 9039634... clean up the cities navigation
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
             stroke: false,
             fillColor: "#00FFFF",
@@ -294,18 +303,18 @@ map.on("overlayadd", function(e) {
   if (e.layer === trailHeadsLayer) {
     markerClusters.addLayer(trailHeads);
   }
-  // if (e.layer === citiesLayer) {
-  //   markerClusters.addLayer(cities);
-  // }
+  if (e.layer === citiesLayer) {
+    markerClusters.addLayer(cities);
+  }
 });
 
 map.on("overlayremove", function(e) {
   if (e.layer === trailHeadsLayer) {
     markerClusters.removeLayer(trailHeads);
   }
-  // if (e.layer === citiesLayer) {
-  //   markerClusters.removeLayer(cities);
-  // }
+  if (e.layer === citiesLayer) {
+    markerClusters.removeLayer(cities);
+  }
 });
 
 /* Clear feature highlight when featureModal is closed */
@@ -396,7 +405,7 @@ var baseLayers = {
 var groupedOverlays = {
   "Points of Interest": {
     "<img src='assets/img/trailHead-icon-12.svg' width='24' height='28'>&nbsp;Trail Heads": trailHeadsLayer,
-    // "<img src='assets/img/circle-12.svg' width='18' height='18'>&nbsp;Cities": citiesLayer
+    "<img src='assets/img/circle-12.svg' width='18' height='18'>&nbsp;Cities": citiesLayer
   },
   "Trails": {
     "Hike": hike,
