@@ -1,1 +1,725 @@
-{ "type": "FeatureCollection", "features": [ { "geometry": { "type": "Point", "coordinates": [ -84.52927026380632, 38.391676801164834 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "Sadieville-Eagle Creek Park", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "D", "Equestrian": null, "Rustic_Equ": null, "Kiosk": "YES", "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": "YES", "Lighting": "YES", "Bicycle_Ra": "YES", "Overflow_P": null, "OBJECTID": 1, "RuleID": 1, "Seating": null, "ADA__Acces": "YES", "Shade": null, "Drinking_F": "YES", "Trail_Acce": null, "Hitch_Rail": null, "Accessible": "YES", "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": "YES" } }, { "geometry": { "type": "Point", "coordinates": [ -84.56806873115849, 38.395357583023944 ] }, "type": "Feature", "properties": { "Highline_o": "YES", "Toilet_Bui": "YES", "Trail_Head": "Eagle Creek Horse Motel", "Mounting_R": null, "Group_Fire": "YES", "TrailHead_": "A", "Equestrian": null, "Rustic_Equ": null, "Kiosk": null, "Arena_or_R": "YES", "Waste_Rece": null, "Auto_Parki": "YES", "Lighting": null, "Bicycle_Ra": "NO", "Overflow_P": "NO", "OBJECTID": 2, "RuleID": 1, "Seating": null, "ADA__Acces": null, "Shade": "YES", "Drinking_F": null, "Trail_Acce": "YES", "Hitch_Rail": "YES", "Accessible": "YES", "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": "YES" } }, { "geometry": { "type": "Point", "coordinates": [ -84.570799982322, 38.37744682139191 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "I 75 & 32 Interchange", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "E", "Equestrian": null, "Rustic_Equ": null, "Kiosk": null, "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": "YES", "Lighting": null, "Bicycle_Ra": null, "Overflow_P": "YES", "OBJECTID": 3, "RuleID": 1, "Seating": null, "ADA__Acces": "YES", "Shade": null, "Drinking_F": null, "Trail_Acce": null, "Hitch_Rail": null, "Accessible": "YES", "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": null } }, { "geometry": { "type": "Point", "coordinates": [ -84.64373291312448, 38.35556156761432 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "Proposed Reservoir", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "F", "Equestrian": null, "Rustic_Equ": null, "Kiosk": "YES", "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": "YES", "Lighting": null, "Bicycle_Ra": null, "Overflow_P": null, "OBJECTID": 4, "RuleID": 1, "Seating": null, "ADA__Acces": null, "Shade": "YES", "Drinking_F": null, "Trail_Acce": "YES", "Hitch_Rail": null, "Accessible": null, "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": null } }, { "geometry": { "type": "Point", "coordinates": [ -84.56225932953454, 38.209666991721896 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": "YES", "Trail_Head": "Water Plant", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "K", "Equestrian": null, "Rustic_Equ": null, "Kiosk": "YES", "Arena_or_R": null, "Waste_Rece": "YES", "Auto_Parki": "YES", "Lighting": null, "Bicycle_Ra": null, "Overflow_P": "YES", "OBJECTID": 5, "RuleID": 1, "Seating": null, "ADA__Acces": "YES", "Shade": "YES", "Drinking_F": null, "Trail_Acce": "YES", "Hitch_Rail": null, "Accessible": "YES", "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": "YES" } }, { "geometry": { "type": "Point", "coordinates": [ -84.54815046843498, 38.2016188513309 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": "YES", "Trail_Head": "Georgetown College Athletic Campus", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "L", "Equestrian": null, "Rustic_Equ": null, "Kiosk": "YES", "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": "YES", "Lighting": "YES", "Bicycle_Ra": "YES", "Overflow_P": null, "OBJECTID": 6, "RuleID": 1, "Seating": "YES", "ADA__Acces": "YES", "Shade": "YES", "Drinking_F": "YES", "Trail_Acce": "YES", "Hitch_Rail": null, "Accessible": "YES", "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": "YES" } }, { "geometry": { "type": "Point", "coordinates": [ -84.59424314613275, 38.18029213822845 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "Old Friends Farm", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "M", "Equestrian": null, "Rustic_Equ": null, "Kiosk": null, "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": "NO", "Lighting": null, "Bicycle_Ra": null, "Overflow_P": null, "OBJECTID": 7, "RuleID": 1, "Seating": null, "ADA__Acces": null, "Shade": null, "Drinking_F": null, "Trail_Acce": null, "Hitch_Rail": null, "Accessible": null, "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": null } }, { "geometry": { "type": "Point", "coordinates": [ -84.53503054374966, 38.171756532186606 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "Campgrounds", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "P", "Equestrian": null, "Rustic_Equ": null, "Kiosk": null, "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": "NO", "Lighting": null, "Bicycle_Ra": null, "Overflow_P": null, "OBJECTID": 9, "RuleID": 1, "Seating": null, "ADA__Acces": null, "Shade": null, "Drinking_F": null, "Trail_Acce": null, "Hitch_Rail": null, "Accessible": null, "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": null } }, { "geometry": { "type": "Point", "coordinates": [ -84.5133255665169, 38.14222539062378 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "North Legacy", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "R", "Equestrian": null, "Rustic_Equ": null, "Kiosk": "YES", "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": "YES", "Lighting": null, "Bicycle_Ra": "YES", "Overflow_P": null, "OBJECTID": 10, "RuleID": 1, "Seating": null, "ADA__Acces": null, "Shade": null, "Drinking_F": null, "Trail_Acce": "YES", "Hitch_Rail": null, "Accessible": "YES", "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": null } }, { "geometry": { "type": "Point", "coordinates": [ -84.55110008034563, 38.16731326333386 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "US 25 & Grace Christian Church", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "O", "Equestrian": null, "Rustic_Equ": null, "Kiosk": null, "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": "NO", "Lighting": null, "Bicycle_Ra": null, "Overflow_P": null, "OBJECTID": 8, "RuleID": 1, "Seating": null, "ADA__Acces": null, "Shade": null, "Drinking_F": null, "Trail_Acce": null, "Hitch_Rail": null, "Accessible": null, "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": null } }, { "geometry": { "type": "Point", "coordinates": [ -84.56223671057455, 38.38446654329939 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "Horse Trailer Parking", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "B", "Equestrian": null, "Rustic_Equ": null, "Kiosk": null, "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": null, "Lighting": null, "Bicycle_Ra": null, "Overflow_P": null, "OBJECTID": 11, "RuleID": 1, "Seating": null, "ADA__Acces": null, "Shade": null, "Drinking_F": null, "Trail_Acce": null, "Hitch_Rail": null, "Accessible": null, "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": null } }, { "geometry": { "type": "Point", "coordinates": [ -84.64408782325081, 38.34690868390265 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "Gaines & Lytles Fork", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "G", "Equestrian": null, "Rustic_Equ": null, "Kiosk": null, "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": null, "Lighting": null, "Bicycle_Ra": null, "Overflow_P": null, "OBJECTID": 14, "RuleID": 0, "Seating": null, "ADA__Acces": null, "Shade": null, "Drinking_F": null, "Trail_Acce": null, "Hitch_Rail": null, "Accessible": null, "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": null } }, { "geometry": { "type": "Point", "coordinates": [ -84.57144458431873, 38.210763705322684 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "W Main St & N Elkhorn", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "J", "Equestrian": null, "Rustic_Equ": null, "Kiosk": null, "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": null, "Lighting": null, "Bicycle_Ra": null, "Overflow_P": null, "OBJECTID": 15, "RuleID": 0, "Seating": null, "ADA__Acces": null, "Shade": null, "Drinking_F": null, "Trail_Acce": null, "Hitch_Rail": null, "Accessible": null, "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": null } }, { "geometry": { "type": "Point", "coordinates": [ -84.62702221583737, 38.32998460095047 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "Skullbuster", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "H", "Equestrian": null, "Rustic_Equ": null, "Kiosk": null, "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": null, "Lighting": null, "Bicycle_Ra": null, "Overflow_P": null, "OBJECTID": 16, "RuleID": 0, "Seating": null, "ADA__Acces": null, "Shade": null, "Drinking_F": null, "Trail_Acce": null, "Hitch_Rail": null, "Accessible": null, "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": null } }, { "geometry": { "type": "Point", "coordinates": [ -84.64313295432453, 38.16050883924364 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "Equus Run Vineyards", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "N", "Equestrian": null, "Rustic_Equ": null, "Kiosk": null, "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": null, "Lighting": null, "Bicycle_Ra": null, "Overflow_P": null, "OBJECTID": 17, "RuleID": 0, "Seating": null, "ADA__Acces": null, "Shade": null, "Drinking_F": null, "Trail_Acce": null, "Hitch_Rail": null, "Accessible": null, "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": null } }, { "geometry": { "type": "Point", "coordinates": [ -84.68794607738563, 38.271265036481054 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "Stamping Ground", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "I", "Equestrian": null, "Rustic_Equ": null, "Kiosk": null, "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": null, "Lighting": null, "Bicycle_Ra": null, "Overflow_P": null, "OBJECTID": 18, "RuleID": 0, "Seating": null, "ADA__Acces": null, "Shade": null, "Drinking_F": null, "Trail_Acce": null, "Hitch_Rail": null, "Accessible": null, "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": null } }, { "geometry": { "type": "Point", "coordinates": [ -84.543198174135, 38.389347588119904 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "Sadieville-Eagle Bend", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "C", "Equestrian": null, "Rustic_Equ": null, "Kiosk": null, "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": null, "Lighting": null, "Bicycle_Ra": null, "Overflow_P": null, "OBJECTID": 19, "RuleID": 0, "Seating": null, "ADA__Acces": null, "Shade": null, "Drinking_F": null, "Trail_Acce": null, "Hitch_Rail": null, "Accessible": null, "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": null } }, { "geometry": { "type": "Point", "coordinates": [ -84.52663949954778, 38.160599326667416 ] }, "type": "Feature", "properties": { "Highline_o": null, "Toilet_Bui": null, "Trail_Head": "Kentucky Horse Park", "Mounting_R": null, "Group_Fire": null, "TrailHead_": "Q", "Equestrian": null, "Rustic_Equ": null, "Kiosk": null, "Arena_or_R": null, "Waste_Rece": null, "Auto_Parki": null, "Lighting": null, "Bicycle_Ra": null, "Overflow_P": null, "OBJECTID": 20, "RuleID": 0, "Seating": null, "ADA__Acces": null, "Shade": null, "Drinking_F": null, "Trail_Acce": null, "Hitch_Rail": null, "Accessible": null, "Water_Foun": null, "Manure_Dis": null, "Water_Trou": null, "Picnic_Tab": null } } ] }
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.52927026380632,
+          38.391676801164834
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "Sadieville-Eagle Creek Park",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "D",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": "YES",
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": "YES",
+        "Lighting": "YES",
+        "Bicycle_Ra": "YES",
+        "Overflow_P": null,
+        "OBJECTID": 1,
+        "RuleID": 1,
+        "Seating": null,
+        "ADA__Acces": "YES",
+        "Shade": null,
+        "Drinking_F": "YES",
+        "Trail_Acce": null,
+        "Hitch_Rail": null,
+        "Accessible": "YES",
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": "YES"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.56806873115849,
+          38.395357583023944
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": "YES",
+        "Toilet_Bui": "YES",
+        "Trail_Head": "Eagle Creek Horse Motel",
+        "Mounting_R": null,
+        "Group_Fire": "YES",
+        "TrailHead_": "A",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": null,
+        "Arena_or_R": "YES",
+        "Waste_Rece": null,
+        "Auto_Parki": "YES",
+        "Lighting": null,
+        "Bicycle_Ra": "NO",
+        "Overflow_P": "NO",
+        "OBJECTID": 2,
+        "RuleID": 1,
+        "Seating": null,
+        "ADA__Acces": null,
+        "Shade": "YES",
+        "Drinking_F": null,
+        "Trail_Acce": "YES",
+        "Hitch_Rail": "YES",
+        "Accessible": "YES",
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": "YES"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.570799982322,
+          38.37744682139191
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "I 75 & 32 Interchange",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "E",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": null,
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": "YES",
+        "Lighting": null,
+        "Bicycle_Ra": null,
+        "Overflow_P": "YES",
+        "OBJECTID": 3,
+        "RuleID": 1,
+        "Seating": null,
+        "ADA__Acces": "YES",
+        "Shade": null,
+        "Drinking_F": null,
+        "Trail_Acce": null,
+        "Hitch_Rail": null,
+        "Accessible": "YES",
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.64373291312448,
+          38.35556156761432
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "Proposed Reservoir",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "F",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": "YES",
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": "YES",
+        "Lighting": null,
+        "Bicycle_Ra": null,
+        "Overflow_P": null,
+        "OBJECTID": 4,
+        "RuleID": 1,
+        "Seating": null,
+        "ADA__Acces": null,
+        "Shade": "YES",
+        "Drinking_F": null,
+        "Trail_Acce": "YES",
+        "Hitch_Rail": null,
+        "Accessible": null,
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.56225932953454,
+          38.209666991721896
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": "YES",
+        "Trail_Head": "Water Plant",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "K",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": "YES",
+        "Arena_or_R": null,
+        "Waste_Rece": "YES",
+        "Auto_Parki": "YES",
+        "Lighting": null,
+        "Bicycle_Ra": null,
+        "Overflow_P": "YES",
+        "OBJECTID": 5,
+        "RuleID": 1,
+        "Seating": null,
+        "ADA__Acces": "YES",
+        "Shade": "YES",
+        "Drinking_F": null,
+        "Trail_Acce": "YES",
+        "Hitch_Rail": null,
+        "Accessible": "YES",
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": "YES"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.54815046843498,
+          38.2016188513309
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": "YES",
+        "Trail_Head": "Georgetown College Athletic Campus",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "L",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": "YES",
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": "YES",
+        "Lighting": "YES",
+        "Bicycle_Ra": "YES",
+        "Overflow_P": null,
+        "OBJECTID": 6,
+        "RuleID": 1,
+        "Seating": "YES",
+        "ADA__Acces": "YES",
+        "Shade": "YES",
+        "Drinking_F": "YES",
+        "Trail_Acce": "YES",
+        "Hitch_Rail": null,
+        "Accessible": "YES",
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": "YES"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.59424314613275,
+          38.18029213822845
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "Old Friends Farm",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "M",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": null,
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": "NO",
+        "Lighting": null,
+        "Bicycle_Ra": null,
+        "Overflow_P": null,
+        "OBJECTID": 7,
+        "RuleID": 1,
+        "Seating": null,
+        "ADA__Acces": null,
+        "Shade": null,
+        "Drinking_F": null,
+        "Trail_Acce": null,
+        "Hitch_Rail": null,
+        "Accessible": null,
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.53503054374966,
+          38.171756532186606
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "Campgrounds",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "P",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": null,
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": "NO",
+        "Lighting": null,
+        "Bicycle_Ra": null,
+        "Overflow_P": null,
+        "OBJECTID": 9,
+        "RuleID": 1,
+        "Seating": null,
+        "ADA__Acces": null,
+        "Shade": null,
+        "Drinking_F": null,
+        "Trail_Acce": null,
+        "Hitch_Rail": null,
+        "Accessible": null,
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.5133255665169,
+          38.14222539062378
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "North Legacy",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "R",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": "YES",
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": "YES",
+        "Lighting": null,
+        "Bicycle_Ra": "YES",
+        "Overflow_P": null,
+        "OBJECTID": 10,
+        "RuleID": 1,
+        "Seating": null,
+        "ADA__Acces": null,
+        "Shade": null,
+        "Drinking_F": null,
+        "Trail_Acce": "YES",
+        "Hitch_Rail": null,
+        "Accessible": "YES",
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.55110008034563,
+          38.16731326333386
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "US 25 & Grace Christian Church",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "O",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": null,
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": "NO",
+        "Lighting": null,
+        "Bicycle_Ra": null,
+        "Overflow_P": null,
+        "OBJECTID": 8,
+        "RuleID": 1,
+        "Seating": null,
+        "ADA__Acces": null,
+        "Shade": null,
+        "Drinking_F": null,
+        "Trail_Acce": null,
+        "Hitch_Rail": null,
+        "Accessible": null,
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.56223671057455,
+          38.38446654329939
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "Horse Trailer Parking",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "B",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": null,
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": null,
+        "Lighting": null,
+        "Bicycle_Ra": null,
+        "Overflow_P": null,
+        "OBJECTID": 11,
+        "RuleID": 1,
+        "Seating": null,
+        "ADA__Acces": null,
+        "Shade": null,
+        "Drinking_F": null,
+        "Trail_Acce": null,
+        "Hitch_Rail": null,
+        "Accessible": null,
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.64408782325081,
+          38.34690868390265
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "Gaines & Lytles Fork",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "G",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": null,
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": null,
+        "Lighting": null,
+        "Bicycle_Ra": null,
+        "Overflow_P": null,
+        "OBJECTID": 14,
+        "RuleID": 0,
+        "Seating": null,
+        "ADA__Acces": null,
+        "Shade": null,
+        "Drinking_F": null,
+        "Trail_Acce": null,
+        "Hitch_Rail": null,
+        "Accessible": null,
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.57144458431873,
+          38.210763705322684
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "W Main St & N Elkhorn",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "J",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": null,
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": null,
+        "Lighting": null,
+        "Bicycle_Ra": null,
+        "Overflow_P": null,
+        "OBJECTID": 15,
+        "RuleID": 0,
+        "Seating": null,
+        "ADA__Acces": null,
+        "Shade": null,
+        "Drinking_F": null,
+        "Trail_Acce": null,
+        "Hitch_Rail": null,
+        "Accessible": null,
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.62702221583737,
+          38.32998460095047
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "Skullbuster",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "H",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": null,
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": null,
+        "Lighting": null,
+        "Bicycle_Ra": null,
+        "Overflow_P": null,
+        "OBJECTID": 16,
+        "RuleID": 0,
+        "Seating": null,
+        "ADA__Acces": null,
+        "Shade": null,
+        "Drinking_F": null,
+        "Trail_Acce": null,
+        "Hitch_Rail": null,
+        "Accessible": null,
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.64313295432453,
+          38.16050883924364
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "Equus Run Vineyards",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "N",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": null,
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": null,
+        "Lighting": null,
+        "Bicycle_Ra": null,
+        "Overflow_P": null,
+        "OBJECTID": 17,
+        "RuleID": 0,
+        "Seating": null,
+        "ADA__Acces": null,
+        "Shade": null,
+        "Drinking_F": null,
+        "Trail_Acce": null,
+        "Hitch_Rail": null,
+        "Accessible": null,
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.68794607738563,
+          38.271265036481054
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "Stamping Ground",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "I",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": null,
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": null,
+        "Lighting": null,
+        "Bicycle_Ra": null,
+        "Overflow_P": null,
+        "OBJECTID": 18,
+        "RuleID": 0,
+        "Seating": null,
+        "ADA__Acces": null,
+        "Shade": null,
+        "Drinking_F": null,
+        "Trail_Acce": null,
+        "Hitch_Rail": null,
+        "Accessible": null,
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.543198174135,
+          38.389347588119904
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "Sadieville-Eagle Bend",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "C",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": null,
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": null,
+        "Lighting": null,
+        "Bicycle_Ra": null,
+        "Overflow_P": null,
+        "OBJECTID": 19,
+        "RuleID": 0,
+        "Seating": null,
+        "ADA__Acces": null,
+        "Shade": null,
+        "Drinking_F": null,
+        "Trail_Acce": null,
+        "Hitch_Rail": null,
+        "Accessible": null,
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": null
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.52663949954778,
+          38.160599326667416
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "Highline_o": null,
+        "Toilet_Bui": null,
+        "Trail_Head": "Kentucky Horse Park",
+        "Mounting_R": null,
+        "Group_Fire": null,
+        "TrailHead_": "Q",
+        "Equestrian": null,
+        "Rustic_Equ": null,
+        "Kiosk": null,
+        "Arena_or_R": null,
+        "Waste_Rece": null,
+        "Auto_Parki": null,
+        "Lighting": null,
+        "Bicycle_Ra": null,
+        "Overflow_P": null,
+        "OBJECTID": 20,
+        "RuleID": 0,
+        "Seating": null,
+        "ADA__Acces": null,
+        "Shade": null,
+        "Drinking_F": null,
+        "Trail_Acce": null,
+        "Hitch_Rail": null,
+        "Accessible": null,
+        "Water_Foun": null,
+        "Manure_Dis": null,
+        "Water_Trou": null,
+        "Picnic_Tab": null
+      }
+    }
+  ]
+}
