@@ -240,13 +240,10 @@ var cities = L.geoJson(null, {
     return L.marker(latlng, {
       icon: L.icon({
         iconUrl: "assets/img/circle-12.svg",
-<<<<<<< HEAD
-        iconSize: [0.1, 0.1],
-        iconAnchor: [0.1, 0.1],
-=======
+
         iconSize: [18, 18],
         iconAnchor: [9, 9],
->>>>>>> parent of 9039634... clean up the cities navigation
+
         popupAnchor: [0, 0]
       }),
       title: feature.properties.NAME,
@@ -260,11 +257,8 @@ var cities = L.geoJson(null, {
         click: function (e) {
           $("#feature-title").html(feature.properties.NAME);
           $("#feature-info").html(content);
-<<<<<<< HEAD
-          $("#featureModal").modal("show");
-=======
+
           // $("#featureModal").modal("show");
->>>>>>> parent of 9039634... clean up the cities navigation
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
             stroke: false,
             fillColor: "#00FFFF",
