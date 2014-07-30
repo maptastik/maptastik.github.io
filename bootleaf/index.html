@@ -189,7 +189,31 @@
                 <p>Absolutely no accuracy or completeness guarantee is implied or intended. All information on this map is subject to such variations and corrections as might result from further proposals, public discussion and/or accurate field survey.</p>
               </div>
               <div class="tab-pane fade" id="contact">
-                <form id="contact-form" name="contactform" method="post" action="assets/php/send_form_email.php">
+                <form method="POST" name="contactform" action="contact-form-handler.php"> 
+                <p>
+                  <label for='name'>Your Name:</label> <br>
+                  <input type="text" name="name">
+                </p>
+                <p>
+                  <label for='email'>Email Address:</label> <br>
+                  <input type="text" name="email"> <br>
+                </p>
+                <p>
+                  <label for='message'>Message:</label> <br>
+                  <textarea name="message"></textarea>
+                </p>
+                  <input type="submit" value="Submit"><br>
+                </form>  
+                <script language="JavaScript">
+                // Code for validating the form
+                // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+                // for details
+                var frmvalidator  = new Validator("contactform");
+                frmvalidator.addValidation("name","req","Please provide your name"); 
+                frmvalidator.addValidation("email","req","Please provide your email"); 
+                frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+                </script>
+               <!--  <form id="contact-form" method="post" name="contact_form" action="assets/php/contact-form-handler.php">
                   <div class="well well-sm">
                     <div class="row">
                       <div class="col-md-4">
@@ -217,7 +241,7 @@
                       </div>
                     </div>
                   </div>
-                </form>
+                </form> -->
               </div>
               <div class="tab-pane fade" id="trails-tab">
                 <p>Proposed trails data created in partnership with <a href="http://bluegrasstomorrow.org/" target="_blank">Bluegrass Tomorrow</a>, <a href="http://www.bgadd.org/" target="_blank">the Bluegrass Area Development District</a>, <a href="http://www.cdpengineers.com/" target="_blank">CDP Engineers</a>, <a href="http://www.gscplanning.com/" target="_blank">Georgetown-Scott County Planning Commission</a>, and the <a href="http://www.nps.gov/index.htm" target="_blank">U.S. National Park Service</a></p>
