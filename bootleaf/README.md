@@ -1,31 +1,13 @@
-BootLeaf
+BBHHTA BootLeaf Project
 ========
 
-A simple, responsive template for building web mapping applications with [Bootstrap](http://getbootstrap.com/), [Leaflet](http://leafletjs.com/), and [typeahead.js](http://twitter.github.io/typeahead.js/).
+This is an adaptation of Bryan McBride's Bootleaf template. It's a great combo of site design via [Bootstrap](http://getbootstrap.com/), mapping via [Leaflet](http://leafletjs.com/), and search functionality via [typeahead.js](http://twitter.github.io/typeahead.js/). The project here is an adaptation of the orignal Bootleaf template so that users can see, toggle, and search different trails and trail heads being proposed by the Bluegrass Hike Bike and Horseback Trail Alliance in Scott County, Kentucky.
 
-### Demo:
-http://bmcbride.github.io/bootleaf/
+###  BBHHTA Demo:
+[http://maptastik.github.io/bootleaf/index.html](http://maptastik.github.io/bootleaf/index.html)
 
-### Features:
-* Fullscreen mobile-friendly map template with responsive Navbar and modal placeholders
-* jQuery loading of external GeoJSON files
-* Logical multiple layer marker clustering via the [leaflet marker cluster plugin](https://github.com/Leaflet/Leaflet.markercluster)
-* Elegant client-side multi-layer feature search with autocomplete using [typeahead.js](http://twitter.github.io/typeahead.js/)
-* Responsive sidebar feature list with sorting and filtering via the [leaflet-sidebar plugin](https://github.com/turbo87/leaflet-sidebar/) and [list.js](http://listjs.com/)
-* Marker icons included in grouped layer control via the [grouped layer control plugin](https://github.com/ismyrnow/Leaflet.groupedlayercontrol)
+###  McBride Demo:
+[http://bmcbride.github.io/bootleaf/](http://bmcbride.github.io/bootleaf/)
 
-### Screenshots:
-
-![Desktop](http://bmcbride.github.io/bootleaf/screenshots/bootleaf-desktop1.png)
-
-![Desktop Search](http://bmcbride.github.io/bootleaf/screenshots/bootleaf-desktop2.png)
-
-![Desktop Popup](http://bmcbride.github.io/bootleaf/screenshots/bootleaf-desktop3.png)
-
-![Mobile](http://bmcbride.github.io/bootleaf/screenshots/bootleaf-mobile1.png)
-
-![Mobile Popup](http://bmcbride.github.io/bootleaf/screenshots/bootleaf-mobile2.png)
-
-![Mobile Search](http://bmcbride.github.io/bootleaf/screenshots/bootleaf-mobile3.png)
-
-![Mobile Menu](http://bmcbride.github.io/bootleaf/screenshots/bootleaf-mobile4.png)
+###  Bootleaf Source
+[https://github.com/bmcbride/bootleaf](https://github.com/bmcbride/bootleaf)
